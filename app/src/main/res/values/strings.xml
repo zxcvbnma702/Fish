@@ -8,4 +8,27 @@
     <string name="null_str">     </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    loginActivity -->
+    <string name="login_welcome">Welcome Back</string>
+    <string name="login_welcome2">Sign in to continue</string>
+    <string name="login_account_hint">Phone Number</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_forgot">Forget Password?</string>
+    <string name="login_register_button">If you don`t have an account <b> Register here</b></string>
+    <string name="login_login_button">If you have an account <b> Login here</b></string>
+    <string name="login_verify">Please enter SMS</string>
+    <string name="login_started">Login Started</string>
+    <string name="login_failure">Login Failure</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_no_phone">PhoneNumber can`t be null</string>
+    <string name="login_send">send</string>
+    <string name="login_register_started">Register Started</string>
+    <string name="login_register_failure">Register Failure</string>
+    <string name="login_register_success">Register Success</string>
+    <string name="login_verify_failure">Send Failure</string>
+    <string name="login_verify_success">Send Success</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_button_register">Register</string>
+
 </resources>

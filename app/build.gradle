@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.library'
+    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
 }
 
@@ -7,11 +7,13 @@ android {
     compileSdk rootProject.ext.android["compileSdkVersion"]
 
     defaultConfig {
+        applicationId rootProject.ext.android["applicationId"]
         minSdk        rootProject.ext.android["minSdkVersion"]
         targetSdk     rootProject.ext.android["targetSdkVersion"]
+        versionCode   rootProject.ext.android["versionCode"]
+        versionName   rootProject.ext.android["versionName"]
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -19,6 +21,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    dataBinding{
+        enabled = true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -33,7 +38,14 @@ dependencies {
 
     implementation rootProject.ext.depsLibs["core"]
     implementation rootProject.ext.depsLibs["design"]
+    implementation rootProject.ext.depsLibs["retrofit"]
     implementation rootProject.ext.depsLibs["appcompact"]
+    implementation rootProject.ext.depsLibs["constraint"]
+    implementation rootProject.ext.depsLibs["gsonConverter"]
+    implementation rootProject.ext.depsLibs["lifecycle-ext"]
+    implementation rootProject.ext.depsLibs["lifecycle-livedata"]
+
+    implementation project(path: ':base')
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
