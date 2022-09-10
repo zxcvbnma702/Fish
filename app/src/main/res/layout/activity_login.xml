@@ -11,10 +11,11 @@
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.constraintlayout.motion.widget.MotionLayout
         android:id="@+id/login_root_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_login_xml_login_root_layout_scene"
         tools:context=".ui.auth.LoginActivity">
 
         <ImageView
@@ -32,8 +33,8 @@
             android:id="@+id/login_imgView_logo_rays"
             android:layout_width="130dp"
             android:layout_height="130dp"
-            android:rotation="180"
             android:layout_marginTop="80dp"
+            android:rotation="180"
             android:scaleType="centerInside"
             android:src="@drawable/icon2"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,16 +66,14 @@
             app:tint="@color/lightGrey" />
 
         <LinearLayout
-            android:alpha="1"
             android:id="@+id/login_inputs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginLeft="30dp"
-            android:layout_marginEnd="30dp"
-            android:layout_marginRight="30dp"
-            android:gravity="center"
             android:layout_marginTop="10dp"
+            android:layout_marginEnd="30dp"
+            android:alpha="1"
+            android:gravity="center"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -97,7 +96,6 @@
                 android:textSize="14sp" />
 
             <EditText
-                android:text="@={viewModel.phoneNumber}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -107,19 +105,20 @@
                 android:hint="@string/login_account_hint"
                 android:inputType="phone"
                 android:padding="16dp"
+                android:text="@={viewModel.phoneNumber}"
                 android:textSize="14sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/login_verify"
                     android:layout_width="0dp"
-                    android:layout_weight="3.5"
                     android:layout_height="wrap_content"
+                    android:layout_weight="3.5"
                     android:background="@drawable/edittext_bg"
                     android:drawableStart="@drawable/login_verify"
                     android:drawablePadding="16dp"
@@ -130,11 +129,11 @@
                     android:textSize="14sp" />
 
                 <Button
-                    android:onClick="@{viewModel::onLoginButtonVerify}"
                     android:layout_width="0dp"
-                    android:layout_weight="1"
                     android:layout_height="match_parent"
+                    android:layout_weight="1"
                     android:background="@drawable/button_bg"
+                    android:onClick="@{viewModel::onLoginButtonVerify}"
                     android:text="@string/login_send"
                     android:textColor="@color/white" />
 
@@ -156,25 +155,25 @@
 
             <Button
                 android:id="@+id/bt_login"
-                android:onClick="@{viewModel::onLoginButtonClick}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/button_bg"
+                android:onClick="@{viewModel::onLoginButtonClick}"
                 android:text="@string/login_button_login"
-                android:visibility="visible"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/bt_register"
-                android:onClick="@{viewModel::onRegisterButtonClick}"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/button_bg"
+                android:onClick="@{viewModel::onRegisterButtonClick}"
                 android:text="@string/login_button_register"
-                android:visibility="gone"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:visibility="gone" />
 
         </LinearLayout>
 
@@ -195,26 +194,26 @@
             android:id="@+id/tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
             android:text="@string/login_register_button"
             android:textColor="@color/textHeadline"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintStart_toStartOf="parent"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <ProgressBar
-            android:shadowColor="@color/main_color"
             android:id="@+id/login_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="invisible"
             android:indeterminateTint="@color/main_color"
+            android:shadowColor="@color/main_color"
+            android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
 
 </layout>

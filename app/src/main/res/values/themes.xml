@@ -16,4 +16,13 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+    <style name="SearchView" parent="Widget.AppCompat.Light.SearchView">
+        <item name="editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/textGray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="tint">@color/black</item>
+        <item name="queryBackground">@drawable/search_bg</item>
+    </style>
+
 </resources>

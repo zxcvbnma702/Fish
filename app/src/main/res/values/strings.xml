@@ -30,5 +30,15 @@
     <string name="login_verify_success">Send Success</string>
     <string name="login_button_login">Login</string>
     <string name="login_button_register">Register</string>
+    <string name="home_card_title">咸鱼优品</string>
+    <string name="home_card_title2">验货包真|全国包邮|品质包退</string>
+    <string name="home_card_text_bold_1">潮服潮鞋</string>
+    <string name="home_card_text_common_1">正品尖货</string>
+    <string name="home_card_text_bold_2">潮玩盲盒</string>
+    <string name="home_card_text_common_2">爆款折扣</string>
+    <string name="home_card_text_bold_3">精品手机</string>
+    <string name="home_card_text_common_3">品质担保</string>
+    <string name="home_card_text_bold_4">咸鱼拍</string>
+    <string name="home_card_text_common_4">一元起拍</string>
 
 </resources>

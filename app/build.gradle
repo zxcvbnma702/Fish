@@ -43,6 +43,7 @@ dependencies {
     implementation rootProject.ext.depsLibs["constraint"]
     implementation rootProject.ext.depsLibs["gsonConverter"]
     implementation rootProject.ext.depsLibs["lifecycle-ext"]
+    implementation rootProject.ext.depsLibs["circleImageView"]
     implementation rootProject.ext.depsLibs["lifecycle-livedata"]
 
     implementation project(path: ':base')
