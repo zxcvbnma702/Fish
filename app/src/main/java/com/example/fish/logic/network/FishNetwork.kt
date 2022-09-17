@@ -33,9 +33,7 @@ object FishNetwork {
 
     suspend fun getGoodTypes() = goodsServer.getGoodTypes().await()
 
-//    suspend fun getTypeGoods(userId: String, )
-
-//    suspend fun getTypeGoods() = goodsServer.getTypeGoods().await()
+    suspend fun getTypeGoods(userId: Long, typeId: Int, size: Int) = goodsServer.getTypeGoods(userId, typeId, size).await()
 
     private suspend fun <T> Call<T>.await(): T{
         return suspendCoroutine { continuation ->

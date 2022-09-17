@@ -69,6 +69,13 @@ object Repository{
         }
     }
 
+    fun getTypeGoods(userId: Long, typeId: Int, size: Int) = fire(Dispatchers.IO){
+        val list = FishNetwork.getTypeGoods(userId, typeId, size)
+        run{
+            Result.success(list.data)
+        }
+    }
+
     private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) =
         liveData<Result<T>>(context) {
             val result = try{

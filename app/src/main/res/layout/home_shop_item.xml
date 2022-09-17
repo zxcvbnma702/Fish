@@ -17,6 +17,7 @@
         android:layout_height="150dp"
         android:paddingVertical="5dp">
         <com.google.android.material.card.MaterialCardView
+            android:id="@+id/shop_item_card"
             android:layout_width="343dp"
             android:layout_height="140dp"
             android:background="#ffffffff"

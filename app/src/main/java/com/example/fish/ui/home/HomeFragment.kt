@@ -1,5 +1,7 @@
 package com.example.fish.ui.home
 
+import android.annotation.SuppressLint
+import android.content.res.Resources
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,14 +11,20 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.base.ui.util.toast
+import com.example.fish.FishApplication
 import com.example.fish.R
 import com.example.fish.databinding.FragmentHomeBinding
+import com.example.fish.logic.network.model.AllData
 import com.example.fish.logic.network.model.Record
 import com.example.fish.logic.network.model.TypeData
 import com.example.fish.ui.home.adapter.HomeRecyclerAdapter
 import com.google.android.material.tabs.TabLayout
+import kotlinx.coroutines.*
+import kotlin.concurrent.thread
 
-class HomeFragment : Fragment(), HomeListener{
+class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListener{
 
     private lateinit var binding: FragmentHomeBinding
     private lateinit var myAdapter: HomeRecyclerAdapter
@@ -32,32 +40,14 @@ class HomeFragment : Fragment(), HomeListener{
         binding.viewModel = viewModel
         viewModel.homeListener = this
 
-        initData()
         initView()
         return binding.root
     }
 
-    private fun initData() {
-        val temp :MutableList<Record> =
-            listOf(
-                Record("1", "1","1","sssss", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-                Record("1", "1","1","sssssuuu", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-                Record("1", "1","1","sssssuuu", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-                Record("1", "1","1","sssssuuu", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa")
-            ) as MutableList<Record>
-
-
-        viewModel.getGoodTypes()
-        myAdapter = HomeRecyclerAdapter(temp)
-    }
-
     private fun initView() {
-        val temp2 :MutableList<Record> = mutableListOf(
-            Record("1", "1","1","iiiiiiiiiii", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-            Record("1", "1","1","iiiiii", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-            Record("1", "1","1","siiiiii", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa"),
-            Record("1", "1","1","iiiii", 1, 22, 22, null, 11, 11, 11, 11, 11,"ss", "aa")
-        )
+        viewModel.getGoodTypes()
+
+        myAdapter = HomeRecyclerAdapter(this, viewModel.goodList)
 
         binding.homeRecyclerView.apply{
             layoutManager = LinearLayoutManager(context)
@@ -66,8 +56,8 @@ class HomeFragment : Fragment(), HomeListener{
 
         binding.homeTablayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                myAdapter.exchangeData(temp2)
-                binding.homeRecyclerView.adapter?.notifyItemRangeChanged(0, temp2.size -1)
+                viewModel.typeId = tab!!.tag as Int
+                viewModel.getTypeGoods()
             }
 
             override fun onTabUnselected(tab: TabLayout.Tab?) {
@@ -78,8 +68,19 @@ class HomeFragment : Fragment(), HomeListener{
 
             }
         })
+
+        binding.homeSwipe.apply{
+            setColorSchemeColors(resources.getColor(R.color.main_color),
+                resources.getColor(R.color.purple_200),
+                resources.getColor(R.color.white),
+                resources.getColor(R.color.teal_200))
+            setOnRefreshListener (this@HomeFragment)
+        }
     }
 
+    /**
+     * 初始化 tab 数据
+     */
     override fun onGoodTypes(types: LiveData<Result<List<TypeData>>>) {
         types.observe(this){result ->
             val res = result.getOrNull()
@@ -92,4 +93,44 @@ class HomeFragment : Fragment(), HomeListener{
         }
     }
 
+    /**
+     * 更新 recyclerView 数据
+     * */
+    override fun onTypeGoods(data: LiveData<Result<AllData>>) {
+       data.observe(this@HomeFragment){result ->
+            val goodResponse = result.getOrNull()
+            if (goodResponse != null && goodResponse.total != 0) {
+                myAdapter.exchangeData(goodResponse.records as MutableList<Record>)
+                refreshData()
+            }else{
+                FishApplication.context.toast("暂无数据")
+            }
+        }
+    }
+
+    /**
+     * 刷新 recyclerView 数据
+      */
+    @SuppressLint("NotifyDataSetChanged")
+    private fun refreshData(){
+        binding.homeRecyclerView.adapter?.notifyDataSetChanged()
+    }
+
+    internal fun jumpTo(item: Record) {
+        FishApplication.context.toast(item.content)
+    }
+
+    /**
+     * 在主线程的协程中更新UI
+     */
+    override fun onRefresh() {
+        viewModel.getTypeGoods()
+        val job = Job()
+        CoroutineScope(job).launch {
+            withContext(Dispatchers.Main){
+                delay(4000)
+                binding.homeSwipe.isRefreshing = false
+            }
+        }
+    }
 }

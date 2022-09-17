@@ -121,9 +121,9 @@ class LoginActivity : AppCompatActivity() , AuthListener{
     private fun saveLoginStatus(userId: String, isLogin: Boolean, isStore: Boolean) {
         FishApplication.sp.edit().apply{
             clear()
-            putString("userID", userId)
-            putBoolean("isLogin", isLogin)
-            putBoolean("isStore", isStore)
+            putString(FishApplication.userID, userId)
+            putBoolean(FishApplication.isLogin, isLogin)
+            putBoolean(FishApplication.isStore, isStore)
             apply()
         }
     }

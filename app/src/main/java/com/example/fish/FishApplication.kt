@@ -19,6 +19,9 @@ class FishApplication : Application(){
         lateinit var sp: SharedPreferences
         const val appId = "00871f090e174fb7bf20fb1a6a7f71e2"
         const val appSecret = "863547048aa7289c0425787b4e8558bb15e68"
+        const val userID = "userID"
+        const val isLogin = "isLogin"
+        const val isStore = "isStore"
     }
 
     override fun onCreate() {

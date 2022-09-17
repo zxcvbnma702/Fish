@@ -1,6 +1,7 @@
 package com.example.fish.ui.home
 
 import androidx.lifecycle.LiveData
+import com.example.fish.logic.network.model.AllData
 import com.example.fish.logic.network.model.TypeData
 
 /**
@@ -10,4 +11,5 @@ import com.example.fish.logic.network.model.TypeData
  */
 interface HomeListener {
     fun onGoodTypes(types: LiveData<Result<List<TypeData>>>)
+    fun onTypeGoods(data: LiveData<Result<AllData>>)
 }
