@@ -1,9 +1,10 @@
 package com.example.fish.ui.auth
 
-import android.util.Log
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.fish.logic.Repository
+import com.example.fish.logic.db.entity.User
+import com.example.fish.logic.network.model.Data
 
 /**
  * @author:SunShibo
@@ -15,18 +16,13 @@ class UserViewModel: ViewModel() {
     var password: String? = null
     var sms: String? = null
 
-    var authListener: AuthListener? = null
+    private val repository = Repository
 
-    //验证码
-//    private val verifyLiveData = MutableLiveData<String>()
-//
-//    val smsLiveData = Transformations.switchMap(verifyLiveData){
-//        Repository.verify(it)
-//    }
-//
-//    fun verify(phoneNumber: String){
-//        verifyLiveData.value = phoneNumber
-//    }
+    internal var authListener: AuthListener? = null
+
+    fun getUserData() = repository.getUserData()
+    fun saveUserData(user: User) = repository.saveUserData(user)
+    fun saveUserData(user: Data) = repository.saveUserData(user)
 
     fun onLoginButtonClick(view: View){
         authListener?.onLoginStarted()
@@ -34,7 +30,8 @@ class UserViewModel: ViewModel() {
             authListener?.onLoginFailure("Invalid email or password")
             return
         }
-        val loginResult = Repository.userLogin(phoneNumber!!, sms!!)
+        val loginResult = repository.userLogin(phoneNumber!!, sms!!)
+
         authListener?.onLoginSuccess(loginResult)
     }
 
@@ -43,7 +40,7 @@ class UserViewModel: ViewModel() {
             authListener?.onVerifyFailure("Invalid phoneNumber")
             return
         }
-        val sendResult = Repository.verify(phoneNumber!!)
+        val sendResult = repository.verify(phoneNumber!!)
         authListener?.onVerifySuccess(sendResult)
     }
 
@@ -53,7 +50,7 @@ class UserViewModel: ViewModel() {
             authListener?.onRegisterFailure("Invalid email or password")
             return
         }
-        val registerResult = Repository.userRegister(phoneNumber!!, sms!!)
+        val registerResult = repository.userRegister(phoneNumber!!, sms!!)
         authListener?.onRegisterSuccess(registerResult)
     }
 }

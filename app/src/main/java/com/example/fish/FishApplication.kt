@@ -3,6 +3,9 @@ package com.example.fish
 import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
+import com.example.base.ui.util.initSp
+import com.example.fish.logic.db.AppDatabase
 
 /**
  * @author:SunShibo
@@ -13,6 +16,7 @@ class FishApplication : Application(){
     companion object{
         @SuppressLint("StaticFieldLeak")
         lateinit var context: Context
+        lateinit var sp: SharedPreferences
         const val appId = "00871f090e174fb7bf20fb1a6a7f71e2"
         const val appSecret = "863547048aa7289c0425787b4e8558bb15e68"
     }
@@ -20,5 +24,7 @@ class FishApplication : Application(){
     override fun onCreate() {
         super.onCreate()
         context = applicationContext
+        AppDatabase.invoke(this)
+        sp = initSp()
     }
 }

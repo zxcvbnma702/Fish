@@ -10,9 +10,10 @@
             type="com.example.fish.ui.home.HomeViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#F6F6F9FF"
         tools:context=".ui.home.HomeFragment">
 
         <androidx.core.widget.NestedScrollView
@@ -21,7 +22,7 @@
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
                 <RelativeLayout
@@ -67,7 +68,7 @@
                         android:layout_height="135dp"
                         android:layout_centerHorizontal="true"
                         android:layout_marginTop="90dp"
-                        android:background="#FFFEF2FF"
+                        android:background="#FFFEF2"
                         android:elevation="20dp"
                         app:cardCornerRadius="14dp">
 
@@ -226,29 +227,32 @@
 
                 </RelativeLayout>
 
-
                 <com.google.android.material.tabs.TabLayout
-                    android:translationY="-20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginStart="20dp"
-                    android:background="@color/textGray"
                     android:id="@+id/home_tablayout"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"/>
+                    android:layout_height="45dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:translationY="-10dp"
+                    app:tabBackground="@drawable/tab_bg"
+                    app:tabIndicator="@drawable/tab_selected_indicator"
+                    app:tabIndicatorColor="@color/main_color"
+                    app:tabIndicatorHeight="45dp"
+                    app:tabMinWidth="76dp"
+                    app:tabMode="auto"
+                    app:tabRippleColor="@color/main_color"
+                    app:tabSelectedTextColor="@color/white"
+                    app:tabTextColor="@color/black" />
 
                 <androidx.recyclerview.widget.RecyclerView
-                    android:background="@color/teal_200"
                     android:id="@+id/home_recyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"/>
-
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 
         </androidx.core.widget.NestedScrollView>
 
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 </layout>

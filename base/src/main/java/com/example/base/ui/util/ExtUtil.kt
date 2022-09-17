@@ -1,6 +1,7 @@
 package com.example.base.ui.util
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.widget.Toast
 
 /**
@@ -26,4 +27,10 @@ fun Context.toast(res: Int, vararg context: String) {
     }
     Toast.makeText(this, getString(res) + content, Toast.LENGTH_SHORT).show()
 }
+
+fun Context.initSp(): SharedPreferences =
+    this.getSharedPreferences("LoginStatus", Context.MODE_PRIVATE)
+
+
+
 

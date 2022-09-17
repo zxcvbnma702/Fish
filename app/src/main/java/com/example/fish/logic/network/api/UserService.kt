@@ -1,8 +1,8 @@
 package com.example.fish.logic.network.api
 
 import com.example.fish.FishApplication
-import com.example.fish.logic.model.UserResponse
-import com.example.fish.logic.model.VerifyResponse
+import com.example.fish.logic.network.model.UserResponse
+import com.example.fish.logic.network.model.VerifyResponse
 import retrofit2.Call
 import retrofit2.http.*
 
@@ -19,9 +19,9 @@ interface UserService {
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @POST("user/login")
-    fun loginAccount(@Query("phone") phone: String, @Query("code") code: String): Call<UserResponse>
+    fun loginAccount(@Body requestBody: Map<String, String>): Call<UserResponse>
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @POST("user/register")
-    fun registerAccount(@Body phone: String, @Body code: String): Call<VerifyResponse>
+    fun registerAccount(@Body requestBody: Map<String, String>): Call<VerifyResponse>
 }

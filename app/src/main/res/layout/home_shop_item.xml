@@ -1,71 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="343dp"
-    android:layout_height="140dp"
-    android:background="#ffffffff"
-    app:cardCornerRadius="10dp"
-    android:clickable="true"
-    android:focusable="true"
-    android:elevation="20dp">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="good"
+            type="com.example.fish.logic.network.model.Record" />
+
+        <variable
+            name="goodModel"
+            type="com.example.fish.ui.home.HomeViewModel" />
+    </data>
     
-    <ImageView
-        android:id="@+id/shop_item_image"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="16dp"
-        android:layout_width="108dp"
-        android:layout_height="108dp"
-        android:scaleType="centerCrop"
-        android:src="@color/main_color"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingVertical="5dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="343dp"
+            android:layout_height="140dp"
+            android:background="#ffffffff"
+            android:clickable="true"
+            android:elevation="20dp"
+            android:focusable="true"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/shop_item_title"
-        android:layout_width="143dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="16dp"
-        android:text="标题"
-        android:textStyle="bold"
-        android:textSize="17sp"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:textColor="@color/black"/>
-    
-    <TextView
-        android:id="@+id/shop_item_content"
-        android:layout_width="175dp"
-        android:layout_height="40dp"
-        android:textSize="12sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="140dp"
-        android:textColor="@color/textGray"
-        android:text="送耳机套壳，心动不如行动，可以小刀，感兴趣的话点“我…"
-        android:maxLines="2"/>
+            <ImageView
 
-    <TextView
-        android:id="@+id/shop_item_price"
-        android:layout_width="38dp"
-        android:layout_height="16dp"
-        android:textColor="@color/black"
-        android:layout_marginStart="140dp"
-        android:layout_marginTop="102dp"
-        android:textSize="14sp"
-        android:text="99元"
-        android:textStyle="bold"/>
+                android:id="@+id/shop_item_image"
+                android:layout_width="108dp"
+                android:layout_height="108dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:scaleType="centerCrop"
+                android:src="@color/main_color" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/shop_item_cart"
-        android:layout_width="28dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginStart="300dp"
-        android:src="@drawable/ic_cart"
-        app:civ_border_width="2dp"
-        app:civ_border_color="@color/main_color"
-        app:civ_circle_background_color="@color/main_color">
+            <TextView
+                android:id="@+id/shop_item_title"
+                android:layout_width="143dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="16dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@{String.valueOf(good.id)}"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold" />
 
-    </de.hdodenhof.circleimageview.CircleImageView>
+            <TextView
+                android:id="@+id/shop_item_content"
+                android:layout_width="175dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="50dp"
+                android:maxLines="2"
+                android:text="@{good.content}"
+                android:textColor="@color/textGray"
+                android:textSize="12sp" />
 
+            <TextView
+                android:id="@+id/shop_item_price"
+                android:layout_width="38dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="102dp"
+                android:text="@{String.valueOf(good.price)}"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="end"/>
 
-</com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginStart="180dp"
+                android:layout_marginTop="102dp"
+                android:text="@string/home_shop_item_yuan"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/shop_item_cart"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="300dp"
+                android:layout_marginTop="96dp"
+                android:src="@drawable/ic_cart"
+                app:civ_border_color="@color/main_color"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="@color/main_color">
+
+            </de.hdodenhof.circleimageview.CircleImageView>
+
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

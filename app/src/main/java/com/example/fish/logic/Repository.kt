@@ -1,54 +1,81 @@
 package com.example.fish.logic
 
-import android.database.CursorJoiner
-import android.util.Log
 import androidx.lifecycle.liveData
-import com.example.base.ui.exception.LogException
-import com.example.fish.logic.model.UserResponse
+import com.example.fish.FishApplication
+import com.example.fish.logic.db.AppDatabase
+import com.example.fish.logic.db.entity.User
 import com.example.fish.logic.network.FishNetwork
+import com.example.fish.logic.network.model.Data
 import kotlinx.coroutines.Dispatchers
+import kotlin.coroutines.CoroutineContext
 
 /**
  * @author:SunShibo
  * @date:2022-09-05 1:36
  * @feature:
  */
-object Repository {
+object Repository{
 
-    fun verify(phoneNumber: String) = liveData(Dispatchers.IO){
-        val result = try{
-            val sms = FishNetwork.verify(phoneNumber)
-            run {
-                Result.success(sms.msg)
-            }
-        }catch (e: LogException){
-            Result.failure<List<LogException>>(e)
+    /**
+     * Login
+     */
+    fun verify(phoneNumber: String) = fire(Dispatchers.IO){
+        val sms = FishNetwork.verify(phoneNumber)
+        run {
+            Result.success(sms.msg)
         }
-        emit(result)
     }
 
-    fun userLogin(phoneNumber: String, sms: String) = liveData(Dispatchers.IO){
-        val result = try{
-            val response = FishNetwork.login(phoneNumber, sms)
-            run{
-                Result.success(response)
-            }
-        }catch (e: Exception){
-            Result.failure<List<Exception>>(e)
+    fun userLogin(phoneNumber: String, sms: String) = fire(Dispatchers.IO){
+        val request = mapOf("code" to sms, "phone" to phoneNumber)
+        val response = FishNetwork.login(request)
+        run{
+            Result.success(response)
         }
-        emit(result)
     }
 
-    fun userRegister(phoneNumber: String, sms: String) = liveData(Dispatchers.IO){
-        val result = try{
-            val response = FishNetwork.register(phoneNumber, sms)
-            run{
-                Result.success(response.data)
-            }
-        }catch (e: Exception){
-            Result.failure<List<UserResponse>>(e)
+    fun userRegister(phoneNumber: String, sms: String) = fire(Dispatchers.IO){
+        val request = mapOf("code" to sms, "phone" to phoneNumber)
+        val response = FishNetwork.register(request)
+        run{
+            Result.success(response.msg)
         }
-        emit(result)
     }
 
+    fun getUserData() = AppDatabase.invoke(FishApplication.context).getUserDao().getUser()
+    fun saveUserData(user: User) = AppDatabase.invoke(FishApplication.context).getUserDao().upsert(user)
+
+    fun saveUserData(data: Data) {
+        val user: User = User()
+        user.apply {
+            id = data.id
+            appKey = data.appKey
+            avatar = data.avatar
+            money = data.money
+            username = data.username
+        }
+        AppDatabase.invoke(FishApplication.context).getUserDao().upsert(user)
+    }
+
+
+    /**
+     * Goods
+     */
+
+    fun getGoodTypes() = fire(Dispatchers.IO){
+        val types = FishNetwork.getGoodTypes()
+        run {
+            Result.success(types.data)
+        }
+    }
+
+    private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) =
+        liveData<Result<T>>(context) {
+            val result = try{
+                block()
+            }catch (e: Exception){
+                Result.failure<T>(e)
+            }
+            emit(result)
+        }
 }

@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -37,6 +38,9 @@ android {
 dependencies {
 
     implementation rootProject.ext.depsLibs["core"]
+    implementation rootProject.ext.depsLibs["room"]
+    implementation rootProject.ext.depsLibs["swipe"]
+    implementation rootProject.ext.depsLibs["glide"]
     implementation rootProject.ext.depsLibs["design"]
     implementation rootProject.ext.depsLibs["retrofit"]
     implementation rootProject.ext.depsLibs["appcompact"]
@@ -45,6 +49,9 @@ dependencies {
     implementation rootProject.ext.depsLibs["lifecycle-ext"]
     implementation rootProject.ext.depsLibs["circleImageView"]
     implementation rootProject.ext.depsLibs["lifecycle-livedata"]
+
+    annotationProcessor rootProject.ext.depsLibs["room-compiler" ]
+    kapt(rootProject.ext.depsLibs["room-compiler" ])
 
     implementation project(path: ':base')
 

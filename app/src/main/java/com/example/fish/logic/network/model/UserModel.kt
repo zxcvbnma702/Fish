@@ -1,10 +1,15 @@
-package com.example.fish.logic.model
+package com.example.fish.logic.network.model
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 /**
  * @author:SunShibo
  * @date:2022-09-04 23:34
  * @feature:
  */
+
+//it`s also the register response
 data class VerifyResponse(
     val code: Int,
     val `data`: String,
@@ -20,7 +25,7 @@ data class UserResponse(
 data class Data(
     val appKey: String,
     val avatar: String,
-    val id: Int,
+    val id: String,
     val money: Int,
     val username: String
 )

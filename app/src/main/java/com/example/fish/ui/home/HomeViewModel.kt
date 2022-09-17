@@ -1,6 +1,8 @@
 package com.example.fish.ui.home
 
 import androidx.lifecycle.ViewModel
+import com.example.fish.logic.Repository
+import com.example.fish.logic.network.model.Record
 
 /**
  * @author:SunShibo
@@ -9,4 +11,13 @@ import androidx.lifecycle.ViewModel
  */
 class HomeViewModel: ViewModel() {
 
+    val record: Record?= null
+    val goodList = ArrayList<Record>()
+
+    internal var homeListener: HomeListener ?= null
+
+    fun getGoodTypes(){
+        val types = Repository.getGoodTypes()
+        homeListener?.onGoodTypes(types)
+    }
 }
