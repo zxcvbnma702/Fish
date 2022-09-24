@@ -1,5 +1,6 @@
 package com.example.fish.logic
 
+import android.util.Log
 import androidx.lifecycle.liveData
 import com.example.fish.FishApplication
 import com.example.fish.logic.db.AppDatabase
@@ -69,10 +70,84 @@ object Repository{
         }
     }
 
-    fun getTypeGoods(userId: Long, typeId: Int, size: Int) = fire(Dispatchers.IO){
+    fun getTypeGoods(userId: Int, typeId: Int, size: Int) = fire(Dispatchers.IO){
         val list = FishNetwork.getTypeGoods(userId, typeId, size)
         run{
             Result.success(list.data)
+        }
+    }
+
+    fun saveGoodInformation(address: String, content: String, imageCode: String, price: String, typeId: String, typeName: String, userId: String)
+        = fire(Dispatchers.IO){
+            val request = mapOf(
+                "addr"      to address,
+                "content"   to content,
+                "imageCode" to imageCode,
+                "price"     to price,
+                "typeId"    to typeId,
+                "typeName"  to typeName,
+                "userId"    to userId)
+            val response = FishNetwork.saveGoodInformation(request)
+        run{
+            Result.success(response.msg)
+        }
+    }
+
+    fun postGoodInformation(address: String, content: String, imageCode: String, price: String, typeId: String, typeName: String, userId: String)
+            = fire(Dispatchers.IO){
+        val request = mapOf(
+            "addr"      to address,
+            "content"   to content,
+            "imageCode" to imageCode,
+            "price"     to price,
+            "typeId"    to typeId,
+            "typeName"  to typeName,
+            "userId"    to userId)
+        val response = FishNetwork.postGoodInformation(request)
+        run{
+            Result.success(response.msg)
+        }
+    }
+
+    fun changeGoodInformation(address: String, content: String, id: String, imageCode: String, price: String, typeId: String, typeName: String, userId: String)
+            = fire(Dispatchers.IO){
+        val request = mapOf(
+            "addr"      to address,
+            "content"   to content,
+            "id"        to id,
+            "imageCode" to imageCode,
+            "price"     to price,
+            "typeId"    to typeId,
+            "typeName"  to typeName,
+            "userId"    to userId)
+        val response = FishNetwork.changeGoodInformation(request)
+        run{
+            Result.success(response.data)
+        }
+    }
+
+    fun postSaveGoodInformation(id: String, userId: String)
+            = fire(Dispatchers.IO){
+        val request = mapOf(
+            "id"        to id,
+            "userId"    to userId)
+        val response = FishNetwork.postSaveGoodInformation(request as Map<String, String>)
+        run{
+            Result.success(response.code)
+        }
+    }
+
+    fun deleteGoodInformation(id: Int, userId: Int) = fire(Dispatchers.IO){
+        val response = FishNetwork.deleteGoodInformation(id, userId)
+        run{
+            Result.success(response.data)
+        }
+    }
+
+    fun getSaveListInformation(userId: Int) = fire(Dispatchers.IO){
+        val response = FishNetwork.getSaveGoodInformation(userId)
+        run{
+            Result.success(response.data.records)
         }
     }
 

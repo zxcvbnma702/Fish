@@ -14,6 +14,14 @@ android {
         versionCode   rootProject.ext.android["versionCode"]
         versionName   rootProject.ext.android["versionName"]
 
+        javaCompileOptions {
+            javaCompileOptions {
+                annotationProcessorOptions {
+                    arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+                }
+            }
+        }
+
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -42,6 +50,8 @@ dependencies {
     implementation rootProject.ext.depsLibs["swipe"]
     implementation rootProject.ext.depsLibs["glide"]
     implementation rootProject.ext.depsLibs["design"]
+    implementation rootProject.ext.depsLibs["picture-selector"]
+    implementation rootProject.ext.depsLibs["picture-compress"]
     implementation rootProject.ext.depsLibs["retrofit"]
     implementation rootProject.ext.depsLibs["appcompact"]
     implementation rootProject.ext.depsLibs["constraint"]

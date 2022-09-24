@@ -36,6 +36,7 @@ class LoginActivity : AppCompatActivity() , AuthListener{
         }
         if(FishApplication.sp.getBoolean("isLogin", false)){
             MainActivity.startActivity(this@LoginActivity)
+            finish()
         }
     }
 

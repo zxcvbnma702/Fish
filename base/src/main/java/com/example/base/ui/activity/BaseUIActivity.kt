@@ -3,6 +3,7 @@ package com.example.base.ui.activity
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import com.example.base.R
 import com.example.base.ui.activity.BaseActivity
 
 /**

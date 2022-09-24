@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.base.ui.activity.BaseUIActivity
 import com.example.base.ui.util.toast
 import com.example.fish.R
+import com.example.fish.ui.append.BottomSheetFragment
 import com.example.fish.ui.cart.CartFragment
 import com.example.fish.ui.home.HomeFragment
 import com.example.fish.ui.message.MessageFragment
@@ -46,7 +47,7 @@ class MainActivity : BaseUIActivity() {
         setCurrentFragment(home)
 
         floatButton.setOnClickListener {
-            toast("添加商品")
+            BottomSheetFragment().show(supportFragmentManager, "Append")
         }
 
         bottomNavView.background = null

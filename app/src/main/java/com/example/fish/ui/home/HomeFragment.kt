@@ -3,6 +3,7 @@ package com.example.fish.ui.home
 import android.annotation.SuppressLint
 import android.content.res.Resources
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -56,7 +57,7 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
 
         binding.homeTablayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                viewModel.typeId = tab!!.tag as Int
+                viewModel.typeId = (tab!!.tag as Int?)!!
                 viewModel.getTypeGoods()
             }
 
@@ -72,14 +73,13 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
         binding.homeSwipe.apply{
             setColorSchemeColors(resources.getColor(R.color.main_color),
                 resources.getColor(R.color.purple_200),
-                resources.getColor(R.color.white),
                 resources.getColor(R.color.teal_200))
             setOnRefreshListener (this@HomeFragment)
         }
     }
 
     /**
-     * 初始化 tab 数据
+     * Initialize tab data
      */
     override fun onGoodTypes(types: LiveData<Result<List<TypeData>>>) {
         types.observe(this){result ->
@@ -94,7 +94,7 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
     }
 
     /**
-     * 更新 recyclerView 数据
+     * Update recyclerView data
      * */
     override fun onTypeGoods(data: LiveData<Result<AllData>>) {
        data.observe(this@HomeFragment){result ->
@@ -103,13 +103,14 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
                 myAdapter.exchangeData(goodResponse.records as MutableList<Record>)
                 refreshData()
             }else{
-                FishApplication.context.toast("暂无数据")
+                myAdapter.exchangeData(viewModel.goodList)
+                refreshData()
             }
         }
     }
 
     /**
-     * 刷新 recyclerView 数据
+     * Refresh recyclerView data
       */
     @SuppressLint("NotifyDataSetChanged")
     private fun refreshData(){
@@ -121,14 +122,15 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
     }
 
     /**
-     * 在主线程的协程中更新UI
+     * Refresh data using coroutines
+     * Updating the UI in a coroutine on the main thread
      */
     override fun onRefresh() {
         viewModel.getTypeGoods()
         val job = Job()
         CoroutineScope(job).launch {
             withContext(Dispatchers.Main){
-                delay(4000)
+                delay(3000)
                 binding.homeSwipe.isRefreshing = false
             }
         }

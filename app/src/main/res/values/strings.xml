@@ -6,8 +6,6 @@
     <string name="nav_person">Person</string>
     <string name="float_button">添加商品</string>
     <string name="null_str">     </string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <!--    loginActivity -->
     <string name="login_welcome">Welcome Back</string>
@@ -30,6 +28,8 @@
     <string name="login_verify_success">Send Success</string>
     <string name="login_button_login">Login</string>
     <string name="login_button_register">Register</string>
+
+    <!-- homeFragment   -->
     <string name="home_card_title">咸鱼优品</string>
     <string name="home_card_title2">验货包真|全国包邮|品质包退</string>
     <string name="home_card_text_bold_1">潮服潮鞋</string>
@@ -40,7 +40,34 @@
     <string name="home_card_text_common_3">品质担保</string>
     <string name="home_card_text_bold_4">咸鱼拍</string>
     <string name="home_card_text_common_4">一元起拍</string>
-    <string name="item_shop_hint">送耳机套壳，心动不如行动，可以小刀，感兴趣的话点“我…</string>
     <string name="home_shop_item_yuan">元</string>
+
+    <!--  appendFragment  -->
+    <string name="append_cancel">取消</string>
+    <string name="append_title">发布</string>
+    <string name="append_send">发布</string>
+    <string name="append_picture">添加图片</string>
+    <string name="append_address">发货地: 天津 津南区</string>
+    <string name="append_price">价格</string>
+    <string name="append_price_dig">￥0.00</string>
+    <string name="append_same">同款宝贝</string>
+    <string name="append_same_value">关联同款后,将推荐想买的人</string>
+    <string name="append_more_value">商品类型</string>
+    <string name="append_save_temp">存草稿</string>
+    <string name="append_toast">请将商品信息填写完整</string>
+    <string name="append_send_toast_success">商品信息发送成功</string>
+    <string name="append_send_toast_failure">商品信息发送失败</string>
+    <string name="append_save_toast_success">商品信息暂存成功</string>
+    <string name="append_save_toast_failure">商品信息暂存失败</string>
+
+    <!-- cartFragment   -->
+    <string name="cart_shop_item_yuan">¥</string>
+    <string name="cart_shop_item_text">没人想要</string>
+    <string name="cart_item_send">发布</string>
+    <string name="cart_title">待发布</string>
+    <string name="cart_refresh">刷新完成</string>
+    <string name="cart_send_success">发送成功</string>
+    <string name="cart_send_failure">发送失败</string>
+
 
 </resources>

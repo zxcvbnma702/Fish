@@ -3,7 +3,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.fish">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <queries package="${applicationId}">
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE">
+
+            </action>
+        </intent>
+        <intent>
+            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE">
+
+            </action>
+        </intent>
+    </queries>
 
     <application
         android:name=".FishApplication"
@@ -34,6 +45,9 @@
             </intent-filter>
         </activity>
 
+
     </application>
+
+
 
 </manifest>
