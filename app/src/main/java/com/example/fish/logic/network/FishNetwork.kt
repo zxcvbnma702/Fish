@@ -6,7 +6,6 @@ import com.example.fish.logic.network.api.UserService
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.http.Query
 import kotlin.coroutines.resume
 import kotlin.coroutines.resumeWithException
 import kotlin.coroutines.suspendCoroutine
@@ -39,21 +38,34 @@ object FishNetwork {
     suspend fun getTypeGoods(userId: Int, typeId: Int, size: Int) = goodsServer.getTypeGoods(userId, typeId, size).await()
     //暂存商品信息
     suspend fun saveGoodInformation(requestBody: Map<String, String>) = goodsServer.saveGoodInformation(requestBody).await()
+
     //发布商品信息
-    suspend fun postGoodInformation(requestBody: Map<String, String>) = goodsServer.postGoodInformation(requestBody).await()
+    suspend fun postGoodInformation(requestBody: Map<String, String>) =
+        goodsServer.postGoodInformation(requestBody).await()
+
     //更新商品信息
-    suspend fun changeGoodInformation(requestBody: Map<String, String>) = goodsServer.changeGoodInformation(requestBody).await()
+    suspend fun changeGoodInformation(requestBody: Map<String, String>) =
+        goodsServer.changeGoodInformation(requestBody).await()
+
     //发布草稿
-    suspend fun postSaveGoodInformation(requestBody: Map<String, String>) = goodsServer.postSaveGoodInformation(requestBody).await()
+    suspend fun postSaveGoodInformation(requestBody: Map<String, String>) =
+        goodsServer.postSaveGoodInformation(requestBody).await()
+
     //删除商品信息
-    suspend fun deleteGoodInformation(goodsId: Int, userId: Int) = goodsServer.deleteGoodInformation(goodsId, userId).await()
+    suspend fun deleteGoodInformation(goodsId: Int, userId: Int) =
+        goodsServer.deleteGoodInformation(goodsId, userId).await()
+
     //获取草稿信息
-    suspend fun getSaveGoodInformation(userId: Int) = goodsServer.getSaveGoodInformation(userId).await()
+    suspend fun getSaveGoodInformation(userId: Int) =
+        goodsServer.getSaveGoodInformation(userId).await()
+
+    //获取商品信息
+    suspend fun getDetails(goodsId: Int) = goodsServer.getDetails(goodsId).await()
 
 
-    private suspend fun <T> Call<T>.await(): T{
+    private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->
-            enqueue(object : Callback<T>{
+            enqueue(object : Callback<T> {
                 override fun onResponse(call: Call<T>, response: Response<T>) {
                     val body = response.body()
 //                    ToDo: delete this

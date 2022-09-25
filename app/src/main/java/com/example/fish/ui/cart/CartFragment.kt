@@ -1,15 +1,13 @@
 package com.example.fish.ui.cart
 
-import android.annotation.SuppressLint
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.base.ui.util.toast
 import com.example.fish.FishApplication
@@ -27,7 +25,6 @@ class CartFragment : Fragment(), CartListener,  SwipeRefreshLayout.OnRefreshList
         ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(CartViewModel::class.java)
     }
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -41,14 +38,11 @@ class CartFragment : Fragment(), CartListener,  SwipeRefreshLayout.OnRefreshList
     }
 
     private fun initView() {
-        myAdapter = CartRecyclerAdapter(this, viewModel.saveList)
+        myAdapter = CartRecyclerAdapter(this)
 
         viewModel.getSaveList()
 
-        binding.cartRecyclerView.apply {
-            layoutManager = LinearLayoutManager(FishApplication.context)
-            adapter = myAdapter
-        }
+        binding.cartRecyclerView.adapter = myAdapter
 
         binding.cartSwipe.apply{
             setColorSchemeColors(resources.getColor(R.color.main_color),
@@ -64,7 +58,7 @@ class CartFragment : Fragment(), CartListener,  SwipeRefreshLayout.OnRefreshList
     override fun onSaveListResponse(saveList: LiveData<Result<List<SaveListRecord>>>) {
         saveList.observe(this){result ->
             val list = result.getOrNull()
-            myAdapter.exchangeData(list as MutableList<SaveListRecord>)
+            if (list != null) myAdapter.data = list
         }
     }
 
@@ -91,20 +85,10 @@ class CartFragment : Fragment(), CartListener,  SwipeRefreshLayout.OnRefreshList
         val job = Job()
         CoroutineScope(job).launch {
             withContext(Dispatchers.Main){
-                delay(3000)
+                delay(2000)
                 binding.cartSwipe.isRefreshing = false
-                refreshData()
                 FishApplication.context.toast(R.string.cart_refresh)
             }
         }
     }
-
-    /**
-     * Refresh recyclerView data
-     */
-    @SuppressLint("NotifyDataSetChanged")
-    private fun refreshData(){
-        binding.cartRecyclerView.adapter?.notifyDataSetChanged()
-    }
-
 }

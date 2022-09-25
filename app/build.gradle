@@ -60,7 +60,6 @@ dependencies {
     implementation rootProject.ext.depsLibs["circleImageView"]
     implementation rootProject.ext.depsLibs["lifecycle-livedata"]
 
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:0.18"
 
     annotationProcessor rootProject.ext.depsLibs["room-compiler" ]
     kapt(rootProject.ext.depsLibs["room-compiler" ])

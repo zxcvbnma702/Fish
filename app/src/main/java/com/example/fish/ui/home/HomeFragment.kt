@@ -1,29 +1,24 @@
 package com.example.fish.ui.home
 
 import android.annotation.SuppressLint
-import android.content.res.Resources
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-import com.example.base.ui.util.toast
-import com.example.fish.FishApplication
 import com.example.fish.R
 import com.example.fish.databinding.FragmentHomeBinding
 import com.example.fish.logic.network.model.AllData
 import com.example.fish.logic.network.model.Record
 import com.example.fish.logic.network.model.TypeData
+import com.example.fish.ui.detail.DetailActivity
 import com.example.fish.ui.home.adapter.HomeRecyclerAdapter
 import com.google.android.material.tabs.TabLayout
 import kotlinx.coroutines.*
-import kotlin.concurrent.thread
 
 class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListener{
 
@@ -48,12 +43,9 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
     private fun initView() {
         viewModel.getGoodTypes()
 
-        myAdapter = HomeRecyclerAdapter(this, viewModel.goodList)
+        myAdapter = HomeRecyclerAdapter(this)
 
-        binding.homeRecyclerView.apply{
-            layoutManager = LinearLayoutManager(context)
-            adapter = myAdapter
-        }
+        binding.homeRecyclerView.adapter = myAdapter
 
         binding.homeTablayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
@@ -84,10 +76,12 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
     override fun onGoodTypes(types: LiveData<Result<List<TypeData>>>) {
         types.observe(this){result ->
             val res = result.getOrNull()
-            for(type in res!!){
+            for(type in res!!) {
                 val tab = binding.homeTablayout.newTab()
-                tab.text = type.type
-                tab.tag = type.id
+                tab.apply {
+                    text = type.type
+                    tag = type.id
+                }
                 binding.homeTablayout.addTab(tab)
             }
         }
@@ -96,29 +90,21 @@ class HomeFragment : Fragment(), HomeListener, SwipeRefreshLayout.OnRefreshListe
     /**
      * Update recyclerView data
      * */
-    override fun onTypeGoods(data: LiveData<Result<AllData>>) {
-       data.observe(this@HomeFragment){result ->
-            val goodResponse = result.getOrNull()
-            if (goodResponse != null && goodResponse.total != 0) {
-                myAdapter.exchangeData(goodResponse.records as MutableList<Record>)
-                refreshData()
-            }else{
-                myAdapter.exchangeData(viewModel.goodList)
-                refreshData()
-            }
-        }
-    }
-
-    /**
-     * Refresh recyclerView data
-      */
     @SuppressLint("NotifyDataSetChanged")
-    private fun refreshData(){
-        binding.homeRecyclerView.adapter?.notifyDataSetChanged()
+    override fun onTypeGoods(data: LiveData<Result<AllData>>) {
+       data.observe(this@HomeFragment) { result ->
+           val goodResponse = result.getOrNull()
+           if (goodResponse != null && goodResponse.total != 0) {
+               myAdapter.data = goodResponse.records
+           } else {
+               myAdapter.data = viewModel.goodList
+               binding.homeRecyclerView.adapter?.notifyDataSetChanged()
+           }
+       }
     }
 
     internal fun jumpTo(item: Record) {
-        FishApplication.context.toast(item.content)
+        DetailActivity.startActivity(requireContext(), item.id)
     }
 
     /**

@@ -1,6 +1,5 @@
 package com.example.fish.logic
 
-import android.util.Log
 import androidx.lifecycle.liveData
 import com.example.fish.FishApplication
 import com.example.fish.logic.db.AppDatabase
@@ -144,18 +143,25 @@ object Repository{
         }
     }
 
-    fun getSaveListInformation(userId: Int) = fire(Dispatchers.IO){
+    fun getSaveListInformation(userId: Int) = fire(Dispatchers.IO) {
         val response = FishNetwork.getSaveGoodInformation(userId)
-        run{
+        run {
             Result.success(response.data.records)
+        }
+    }
+
+    fun getDetails(goodsId: Int) = fire(Dispatchers.IO) {
+        val response = FishNetwork.getDetails(goodsId)
+        run {
+            Result.success(response)
         }
     }
 
     private fun <T> fire(context: CoroutineContext, block: suspend () -> Result<T>) =
         liveData<Result<T>>(context) {
-            val result = try{
+            val result = try {
                 block()
-            }catch (e: Exception){
+            } catch (e: Exception) {
                 Result.failure<T>(e)
             }
             emit(result)

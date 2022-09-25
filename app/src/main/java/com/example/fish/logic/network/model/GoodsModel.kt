@@ -1,7 +1,5 @@
 package com.example.fish.logic.network.model
 
-import java.util.ArrayList
-
 /**
  * @author:SunShibo
  * @date:2022-09-10 18:22
@@ -162,5 +160,34 @@ data class SaveListRecord(
     var typeId: Int,
     var typeName: String,
     var username: String
+)
+
+/**
+ * good/details
+ */
+
+data class DetailsResponse(
+    val code: Int,
+    val `data`: DetailsData,
+    val msg: String
+)
+
+data class DetailsData(
+    val addr: String,
+    val appIsShare: Int,
+    val appKey: String,
+    val avatar: Any,
+    val content: String,
+    val createTime: String,
+    val id: String,
+    val imageCode: String,
+    val imageUrlList: List<Any>,
+    val price: Int,
+    val status: Int,
+    val tUserId: String,
+    val tuserId: String,
+    val typeId: Int,
+    val typeName: String,
+    val username: String
 )
 

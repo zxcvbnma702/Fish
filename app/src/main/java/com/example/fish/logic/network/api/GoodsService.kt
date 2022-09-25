@@ -5,12 +5,11 @@ import com.example.fish.logic.network.model.*
 import retrofit2.Call
 import retrofit2.http.*
 import java.io.File
-import java.util.ArrayList
 
 /**
  * @author:SunShibo
  * @date:2022-09-10 18:20
- * @feature:
+ * @feature: request interface
  */
 interface GoodsService {
 
@@ -53,7 +52,10 @@ interface GoodsService {
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @GET("goods/save")
-    fun getSaveGoodInformation(@Query("userId")userId: Int): Call<SaveListResponse>
+    fun getSaveGoodInformation(@Query("userId") userId: Int): Call<SaveListResponse>
 
+    @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
+    @GET("goods/details")
+    fun getDetails(@Query("goodsId") goodsId: Int): Call<DetailsData>
 
 }

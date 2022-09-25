@@ -12,11 +12,18 @@ import com.example.fish.ui.home.HomeFragment
  * @date:2022-09-10 13:29
  * @feature: 使用 databinding 简化代码
  */
-class HomeRecyclerAdapter(private val fragment: HomeFragment, private var data: List<Record>): RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>() {
+class HomeRecyclerAdapter(private val fragment: HomeFragment) :
+    RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: HomeShopItemBinding) : RecyclerView.ViewHolder(binding.root){
+    var data: List<Record> = emptyList()
+        set(value) {
+            field = value
+            notifyItemRangeChanged(0, data.size - 1)
+        }
 
-        fun bind(item: Record){
+    inner class ViewHolder(private val binding: HomeShopItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: Record) {
             binding.shopItemCard.setOnClickListener {
                 fragment.jumpTo(item)
             }
@@ -35,8 +42,4 @@ class HomeRecyclerAdapter(private val fragment: HomeFragment, private var data: 
     }
 
     override fun getItemCount(): Int = data.size
-
-    fun exchangeData(newData: MutableList<Record>){
-        this.data = newData
-    }
 }

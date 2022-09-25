@@ -12,10 +12,18 @@ import com.example.fish.ui.cart.CartFragment
  * @date:2022-09-24 17:37
  * @feature: cart`s recyclerAdapter
  */
-class CartRecyclerAdapter(private val fragment: CartFragment, private var data: List<SaveListRecord>): RecyclerView.Adapter<CartRecyclerAdapter.ViewHolder>() {
+class CartRecyclerAdapter(private val fragment: CartFragment) :
+    RecyclerView.Adapter<CartRecyclerAdapter.ViewHolder>() {
 
-    inner class ViewHolder(private val binding: CartSaveItemBinding) : RecyclerView.ViewHolder(binding.root){
-        fun bind(item: SaveListRecord){
+    var data: List<SaveListRecord> = emptyList()
+        set(value) {
+            field = value
+            notifyItemRangeChanged(0, data.size - 1)
+        }
+
+    inner class ViewHolder(private val binding: CartSaveItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(item: SaveListRecord) {
             binding.good = item
             binding.cartItemSend.setOnClickListener {
                 fragment.viewModel.sendData(item.id)
@@ -34,8 +42,4 @@ class CartRecyclerAdapter(private val fragment: CartFragment, private var data: 
     }
 
     override fun getItemCount(): Int = data.size
-
-    fun exchangeData(newData: MutableList<SaveListRecord>){
-        this.data = newData
-    }
 }
