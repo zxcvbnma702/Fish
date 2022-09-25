@@ -15,7 +15,7 @@ import com.example.fish.ui.home.HomeFragment
 class HomeRecyclerAdapter(private val fragment: HomeFragment) :
     RecyclerView.Adapter<HomeRecyclerAdapter.ViewHolder>() {
 
-    var data: List<Record> = emptyList()
+    internal var data: List<Record> = emptyList()
         set(value) {
             field = value
             notifyItemRangeChanged(0, data.size - 1)

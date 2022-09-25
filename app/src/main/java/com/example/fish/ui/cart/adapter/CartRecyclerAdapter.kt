@@ -15,7 +15,7 @@ import com.example.fish.ui.cart.CartFragment
 class CartRecyclerAdapter(private val fragment: CartFragment) :
     RecyclerView.Adapter<CartRecyclerAdapter.ViewHolder>() {
 
-    var data: List<SaveListRecord> = emptyList()
+    internal var data: List<SaveListRecord> = emptyList()
         set(value) {
             field = value
             notifyItemRangeChanged(0, data.size - 1)

@@ -1,6 +1,5 @@
 package com.example.fish.ui.home
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.fish.FishApplication
 import com.example.fish.logic.Repository
@@ -16,9 +15,11 @@ class HomeViewModel: ViewModel() {
     val userId = FishApplication.sp.getString(FishApplication.userID, "0")
     val record: Record?= null
     var goodList :MutableList<Record> = mutableListOf(
-            Record("1", 0,"1",listOf("kk"), "这个分类没有商品,看看其他分类吧!",
-                "1663588311823", "1", "22", listOf("kk"), 11.toString(), 11,
-                "11", "11", 11,"ss", "aa"))
+            Record(
+                "1", 0, "1", listOf("kk"), "这个分类没有商品,看看其他分类吧!",
+                "1663588311823", "35", "22", listOf("kk"), 11.toString(), 11,
+                "11", "11", 11, "ss", "aa"
+            ))
 
     var typeId = 1
 
