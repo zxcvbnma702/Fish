@@ -3,54 +3,40 @@ package com.example.fish.ui.detail
 import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.ui.activity.BaseActivity
 import com.example.base.ui.util.TabLayoutMediator2
 import com.example.base.ui.util.UIUtils
-import com.example.fish.R
 import com.example.fish.databinding.ActivityDetailBinding
 import com.example.fish.logic.db.entity.Item
 import com.example.fish.logic.network.model.DetailsData
 import com.example.fish.ui.detail.adapter.DetailAdapter
 import com.google.android.material.tabs.TabLayout
 
-class DetailActivity : AppCompatActivity(), DetailsListener {
+class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
 
-    private lateinit var binding: ActivityDetailBinding
-    private val viewModel by lazy {
+    private val mViewModel by lazy {
         ViewModelProvider(
             this,
             ViewModelProvider.NewInstanceFactory()
         ).get(DetailViewModel::class.java)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_detail)
-        binding.viewModel = viewModel
-
-        viewModel.detailsListener = this
+    override fun ActivityDetailBinding.initBindingView() {
+        viewModel = mViewModel
+        mViewModel.detailsListener = this@DetailActivity
 
         val id = intent.getStringExtra("id")
-        if (id == null) viewModel.goodsId = "0" else viewModel.goodsId = id
+        if (id == null) mViewModel.goodsId = "0" else mViewModel.goodsId = id
 
-        initView()
-        setContentView(binding.root)
-    }
-
-    private fun initView() {
-
-        binding.itemList.adapter = DetailAdapter(this@DetailActivity).also {
+        itemList.adapter = DetailAdapter(this@DetailActivity).also {
             it.items = getItemList()
         }
 
-        binding.itemList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        itemList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             var totalDy = 0
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                 totalDy += dy
@@ -63,7 +49,7 @@ class DetailActivity : AppCompatActivity(), DetailsListener {
             }
         })
 
-        val tabList = viewModel.tabList
+        val tabList = mViewModel.tabList
         TabLayoutMediator2(
             tabLayout = binding.tabLayout,
             recyclerView = binding.itemList,

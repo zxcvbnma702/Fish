@@ -4,7 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Application
 import android.content.Context
 import android.content.SharedPreferences
-import com.example.base.ui.util.initSp
+import com.example.base.ui.kxt.initSp
 import com.example.fish.logic.db.AppDatabase
 
 /**

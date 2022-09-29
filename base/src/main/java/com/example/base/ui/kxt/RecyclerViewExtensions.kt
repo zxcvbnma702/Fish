@@ -1,6 +1,6 @@
 @file:JvmName("RecyclerViewExtensions")
 
-package com.example.base.ui.util
+package com.example.base.ui.kxt
 
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView

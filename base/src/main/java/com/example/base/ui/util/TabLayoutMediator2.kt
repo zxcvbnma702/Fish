@@ -1,6 +1,9 @@
 package com.example.base.ui.util
 
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.ui.kxt.findFirstVisibleItemPosition
+import com.example.base.ui.kxt.findLastVisibleItemPosition
+import com.example.base.ui.kxt.scrollToPosition
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener

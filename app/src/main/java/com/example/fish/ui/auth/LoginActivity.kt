@@ -1,15 +1,13 @@
 package com.example.fish.ui.auth
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
 import android.util.Log
 import android.view.View
-import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
-import com.example.base.ui.util.hide
-import com.example.base.ui.util.show
-import com.example.base.ui.util.toast
+import com.example.base.ui.activity.BaseActivity
+import com.example.base.ui.kxt.hide
+import com.example.base.ui.kxt.show
+import com.example.base.ui.kxt.toast
 import com.example.fish.FishApplication
 import com.example.fish.R
 import com.example.fish.databinding.ActivityLoginBinding
@@ -17,60 +15,70 @@ import com.example.fish.logic.network.model.UserResponse
 import com.example.fish.ui.MainActivity
 import kotlin.concurrent.thread
 
-class LoginActivity : AppCompatActivity() , AuthListener{
+class LoginActivity : BaseActivity<ActivityLoginBinding>(), AuthListener {
 
-    private lateinit var binding: ActivityLoginBinding
-    private val viewModel by lazy{
-        ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(UserViewModel::class.java)
+    private val mViewModel by lazy {
+        ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        ).get(UserViewModel::class.java)
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_login)
+    override fun ActivityLoginBinding.initBindingView() {
+        viewModel = mViewModel
+        mViewModel.authListener = this@LoginActivity
 
-        binding.viewModel = viewModel
-        viewModel.authListener = this
-
-        binding.tvRegister.setOnClickListener{
+        tvRegister.setOnClickListener {
             switch()
         }
-        if(FishApplication.sp.getBoolean("isLogin", false)){
-            MainActivity.startActivity(this@LoginActivity)
-            finish()
-        }
+        jumpToMain()
     }
 
+    /**
+     * Login start callback
+     */
     override fun onLoginStarted() {
-//        toast(R.string.login_started)
         binding.loginProgressBar.show()
     }
 
+    /**
+     * Login success callback
+     */
     override fun onLoginSuccess(loginResult: LiveData<Result<UserResponse>>) {
         binding.loginProgressBar.hide()
-        loginResult.observe(this){result->
+        loginResult.observe(this) { result ->
             val response = result.getOrNull()
-            if(response != null && response.code == 200){
+            if (response != null && response.code == 200) {
                 toast(response.msg)
                 thread {
-                    viewModel.saveUserData(response.data)
+                    mViewModel.saveUserData(response.data)
                 }
-                saveLoginStatus(response.data.id,true, true)
+                saveLoginStatus(response.data.id, true, true)
                 MainActivity.startActivity(this@LoginActivity)
-            }else{
+            } else {
                 response?.msg?.let { toast(it) }
             }
         }
     }
 
+    /**
+     * Login failure callback
+     */
     override fun onLoginFailure(msg: String) {
         binding.loginProgressBar.hide()
         toast(R.string.login_failure, msg)
     }
 
+    /**
+     * Login success callback
+     */
     override fun onRegisterStarted() {
         binding.loginProgressBar.show()
     }
 
+    /**
+     * Register success callback
+     */
     override fun onRegisterSuccess(registerResult: LiveData<Result<String>>) {
         binding.loginProgressBar.hide()
         registerResult.observe(this) { result ->
@@ -82,18 +90,24 @@ class LoginActivity : AppCompatActivity() , AuthListener{
         }
     }
 
+    /**
+     * Register failure callback
+     */
     override fun onRegisterFailure(msg: String) {
         toast(R.string.login_register_failure)
         binding.loginProgressBar.hide()
     }
 
+    /**
+     * Verify success callback
+     */
     override fun onVerifySuccess(sendResult: LiveData<Result<String>>) {
-        sendResult.observe(this){result ->
-            if(result.isFailure){
+        sendResult.observe(this) { result ->
+            if (result.isFailure) {
                 Log.e("error", result.getOrThrow())
                 return@observe
             }
-            if(result.isSuccess){
+            if (result.isSuccess) {
                 val response = result.getOrNull()
                 if (response != null) {
                     toast(response)
@@ -103,29 +117,44 @@ class LoginActivity : AppCompatActivity() , AuthListener{
         }
     }
 
+    /**
+     * Verify failure callback
+     */
     override fun onVerifyFailure(msg: String) {
         toast(R.string.login_verify_failure, msg)
     }
 
-    private fun switch(){
-        if(binding.btLogin.visibility == View.VISIBLE){
+    /**
+     * Switch positive button status
+     */
+    private fun switch() {
+        if (binding.btLogin.visibility == View.VISIBLE) {
             binding.btLogin.visibility = View.GONE
             binding.btRegister.visibility = View.VISIBLE
             binding.tvRegister.setText(R.string.login_login_button)
-        }else{
+        } else {
             binding.btLogin.visibility = View.VISIBLE
             binding.btRegister.visibility = View.GONE
             binding.tvRegister.setText(R.string.login_register_button)
         }
     }
 
+    /**
+     * Use sp to save login status
+     */
     private fun saveLoginStatus(userId: String, isLogin: Boolean, isStore: Boolean) {
-        FishApplication.sp.edit().apply{
+        FishApplication.sp.edit().apply {
             clear()
             putString(FishApplication.userID, userId)
             putBoolean(FishApplication.isLogin, isLogin)
             putBoolean(FishApplication.isStore, isStore)
             apply()
         }
+    }
+
+    private fun jumpToMain() {
+        if (!FishApplication.sp.getBoolean("isLogin", false)) return
+        MainActivity.startActivity(this@LoginActivity)
+        finish()
     }
 }

@@ -2,11 +2,9 @@ package com.example.fish.ui.append
 
 import android.view.View
 import androidx.lifecycle.ViewModel
-import com.example.base.ui.util.toast
+import com.example.base.ui.kxt.toast
 import com.example.fish.FishApplication
 import com.example.fish.logic.Repository
-import com.example.fish.logic.network.model.TypeData
-import java.util.*
 
 /**
  * @author:SunShibo

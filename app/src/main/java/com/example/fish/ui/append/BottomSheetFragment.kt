@@ -9,7 +9,7 @@ import androidx.core.view.isVisible
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.base.ui.util.toast
+import com.example.base.ui.kxt.toast
 import com.example.fish.FishApplication
 import com.example.fish.R
 import com.example.fish.databinding.FragmentBottomSheetBinding
@@ -32,13 +32,6 @@ class BottomSheetFragment: BottomSheetDialogFragment(), AppendListener{
     internal val viewModel: AppendViewModel by lazy{
         ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(AppendViewModel::class.java)
     }
-
-//    override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
-//        val dialog = super.onCreateDialog(savedInstanceState)
-//        dialog.setContentView(binding.root)
-//        Log.e("2", "dd")
-//        return dialog
-//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -74,7 +67,7 @@ class BottomSheetFragment: BottomSheetDialogFragment(), AppendListener{
     private fun initView() {
         viewModel.getGoodTypes()
 
-        myAdapter = AppendRecyclerAdapter(this, viewModel.types)
+        myAdapter = AppendRecyclerAdapter(this)
 
         binding.appendRecycler.apply{
             adapter = myAdapter
@@ -89,10 +82,7 @@ class BottomSheetFragment: BottomSheetDialogFragment(), AppendListener{
         }
 
         binding.appendType.setOnClickListener {
-            myAdapter.exchangeData(viewModel.types)
-            binding.appendRecycler.adapter!!.apply {
-                notifyItemChanged(0, viewModel.types - 1)
-            }
+            myAdapter.setData(viewModel.types)
 
             if(binding.appendRecycler.isVisible){
                 binding.appendRecycler.visibility = View.GONE
