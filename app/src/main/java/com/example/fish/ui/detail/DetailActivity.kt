@@ -2,7 +2,7 @@ package com.example.fish.ui.detail
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -11,7 +11,6 @@ import com.example.base.ui.activity.BaseActivity
 import com.example.base.ui.util.TabLayoutMediator2
 import com.example.base.ui.util.UIUtils
 import com.example.fish.databinding.ActivityDetailBinding
-import com.example.fish.logic.db.entity.Item
 import com.example.fish.logic.network.model.DetailsData
 import com.example.fish.ui.detail.adapter.DetailAdapter
 import com.google.android.material.tabs.TabLayout
@@ -25,6 +24,10 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
         ).get(DetailViewModel::class.java)
     }
 
+    private val adapter by lazy {
+        DetailAdapter(this@DetailActivity)
+    }
+
     override fun ActivityDetailBinding.initBindingView() {
         viewModel = mViewModel
         mViewModel.detailsListener = this@DetailActivity
@@ -32,8 +35,10 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
         val id = intent.getStringExtra("id")
         if (id == null) mViewModel.goodsId = "0" else mViewModel.goodsId = id
 
-        itemList.adapter = DetailAdapter(this@DetailActivity).also {
-            it.items = getItemList()
+        mViewModel.getDetails()
+
+        itemList.adapter = adapter.also {
+            it.setData(mViewModel.getItemList(mViewModel.data))
         }
 
         itemList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
@@ -67,22 +72,16 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
     }
 
     override fun onResponse(response: LiveData<Result<DetailsData>>) {
-
-    }
-
-    private fun getItemList(): List<Item> = mutableListOf(
-        Item(DetailAdapter.GALLERY),
-        Item(DetailAdapter.TITLE, Color.BLUE, "title", 100f),
-        Item(DetailAdapter.CONTENT, Color.YELLOW, "content", 200f),
-        Item(DetailAdapter.USER, Color.WHITE, "user", 100f),
-        Item(DetailAdapter.COMMENT, Color.GREEN, "comment", 200f),
-        Item(DetailAdapter.RECOMMEND, Color.LTGRAY, "recommend", 100f),
-        Item(DetailAdapter.OTHER, Color.BLUE, "other", 100f),
-    ).apply {
-        repeat(20) {
-            add(Item(DetailAdapter.OTHER, Color.BLUE, "OTHER", 40f))
+        response.observe(this) { result ->
+            val data = result.getOrNull()
+            mViewModel.data = data
+            adapter.also {
+                it.setData(mViewModel.getItemList(mViewModel.data))
+                Log.e("fff", data.toString())
+            }
         }
     }
+
 
     companion object {
         fun startActivity(context: Context, id: String) {

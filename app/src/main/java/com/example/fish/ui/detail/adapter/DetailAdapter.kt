@@ -3,12 +3,12 @@ package com.example.fish.ui.detail.adapter
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.ViewGroup
+import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
-import com.example.base.ui.util.UIUtils
+import com.example.base.ui.activity.BaseMultiTypeAdapter
 import com.example.fish.R
-import com.example.fish.databinding.ItemGalleryBinding
-import com.example.fish.databinding.ItemNoramlBinding
+import com.example.fish.databinding.*
 import com.example.fish.logic.db.entity.Item
 
 /**
@@ -16,52 +16,112 @@ import com.example.fish.logic.db.entity.Item
  * @date:2022-09-25 22:13
  * @feature:
  */
-class DetailAdapter(private val host: Activity) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
 
-    internal var items: List<Item> = emptyList()
-        set(value) {
-            field = value
-            notifyItemRangeChanged(0, items.size - 1)
-        }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        return if (viewType == GALLERY) {
-            GalleryViewHolder(host, ItemGalleryBinding.inflate(host.layoutInflater, parent, false))
-        } else {
-            NormalViewHolder(ItemNoramlBinding.inflate(host.layoutInflater, parent, false))
+//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+//        return if (viewType == GALLERY) {
+//            GalleryViewHolder(host, ItemGalleryBinding.inflate(host.layoutInflater, parent, false))
+//        } else {
+//            NormalViewHolder(ItemNoramlBinding.inflate(host.layoutInflater, parent, false))
+//        }
+//    }
+//
+//    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
+//        when (holder) {
+//            is NormalViewHolder -> {
+//                holder.bind(items[position])
+//            }
+//            is GalleryViewHolder -> {
+//                //
+//            }
+//            else -> throw IllegalArgumentException("Not support")
+//        }
+//    }
+
+
+    /**
+     * Item type
+     */
+    companion object {
+        const val GALLERY = 101
+        const val TITLE = 102
+        const val CONTENT = 103
+        const val USER = 104
+        const val COMMENT = 105
+        const val RECOMMEND = 106
+        const val OTHER = 109
+    }
+
+    override fun MultiTypeViewHolder.onBindViewHolder(
+        holder: MultiTypeViewHolder,
+        item: Item,
+        position: Int
+    ) {
+        when (holder.binding) {
+            is ItemGalleryBinding -> {
+                GalleryViewHolder(host, this.binding as ItemGalleryBinding)
+            }
+
+            is ItemDetailTitleBinding -> {
+                val binding = this.binding as ItemDetailTitleBinding
+                binding.apply {
+                    itemDetailTitleAddress.text = item.data?.addr
+                    itemDetailTitleContent.text = item.data?.content
+                    itemDetailTitlePrice.text = item.data?.price.toString()
+                    itemDetailTitleTime.text = item.data?.createTime
+                }
+            }
+
+            is ItemDetailUserBinding -> {
+                val binding = this.binding as ItemDetailUserBinding
+                binding.apply {
+                    itemDetailTitleUsername.text = item.data?.username
+                    itemDetailUserAddress.text = item.data?.addr
+//                    todo itemDetailUserEvatar
+                }
+            }
+
+            is ItemDetailCommentBinding -> {
+                val binding = this.binding as ItemDetailCommentBinding
+                binding.apply {
+//                    todo itemDetailCommentEvatar
+                }
+            }
+
+            is ItemDetailContentBinding -> {
+                val binding = this.binding as ItemDetailContentBinding
+                binding.itemDetailCommentContainer.apply {
+//                    todo addView
+                }
+            }
+
+            is ItemDetailRecommendBinding -> {}
+
+            is ItemHomeShopBinding -> {
+//                NormalViewHolder(this.binding as ItemNoramlBinding).bind(item)
+                val binding = this.binding as ItemHomeShopBinding
+
+            }
         }
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        when (holder) {
-            is NormalViewHolder -> {
-                holder.bind(items[position])
-            }
-            is GalleryViewHolder -> {
-                //
-            }
-            else -> throw IllegalArgumentException("Not support")
+    override fun onCreateMultiViewHolder(parent: ViewGroup, viewType: Int): ViewDataBinding {
+        return when (viewType) {
+            GALLERY -> loadLayout(ItemGalleryBinding::class.java, parent)
+            TITLE -> loadLayout(ItemDetailTitleBinding::class.java, parent)
+            CONTENT -> loadLayout(ItemDetailContentBinding::class.java, parent)
+            USER -> loadLayout(ItemDetailUserBinding::class.java, parent)
+            COMMENT -> loadLayout(ItemDetailCommentBinding::class.java, parent)
+            RECOMMEND -> loadLayout(ItemDetailRecommendBinding::class.java, parent)
+            OTHER -> loadLayout(ItemHomeShopBinding::class.java, parent)
+            else -> loadLayout(ItemNoramlBinding::class.java, parent)
         }
     }
 
-    override fun getItemViewType(position: Int): Int = items[position].viewType
+    override fun getItemViewType(position: Int): Int = getData()[position].viewType
 
-    override fun getItemCount(): Int = items.size
-
-    class NormalViewHolder(
-        private val binding: ItemNoramlBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
-
-        fun bind(item: Item) {
-            binding.text.apply {
-                layoutParams.height = UIUtils.dpToPx(item.height)
-                text = item.title
-                setBackgroundColor(item.backgroundColor)
-            }
-        }
-    }
-
-    class GalleryViewHolder(
+    inner class GalleryViewHolder(
         private val host: Activity,
         private val binding: ItemGalleryBinding
     ) : RecyclerView.ViewHolder(binding.root) {
@@ -80,18 +140,5 @@ class DetailAdapter(private val host: Activity) : RecyclerView.Adapter<RecyclerV
                 }
             }
         }
-    }
-
-    /**
-     * Item type
-     */
-    companion object {
-        const val GALLERY = 101
-        const val TITLE = 102
-        const val CONTENT = 103
-        const val USER = 104
-        const val COMMENT = 105
-        const val RECOMMEND = 106
-        const val OTHER = 109
     }
 }

@@ -69,5 +69,20 @@
     <string name="cart_send_success">发送成功</string>
     <string name="cart_send_failure">发送失败</string>
 
+    <!-- detailActivity   -->
+    <string name="detail_item_want">9999 浏览 | 9999人 想要</string>
+    <string name="detail_item_title_tip">发布于:</string>
+    <string name="detail_add">关注</string>
+    <string name="detail_item_leave">留言</string>
+    <string name="detail_comment_one_username">好好他爸爸</string>
+    <string name="detail_comment_two_username">一盘米饭就够了</string>
+    <string name="detail_comment_three_username">为宝宝920</string>
+    <string name="detail_comment_one_content">是不是顺丰到付</string>
+    <string name="detail_comment_two_content">配备充电器吗</string>
+    <string name="detail_comment_three_content">白送吗</string>
+    <string name="detail_all_comment">点击查看全部留言</string>
+    <string name="detail_item_detail">详情</string>
+    <string name="detail_item_recommend">为你推荐</string>
+
 
 </resources>

@@ -56,6 +56,6 @@ interface GoodsService {
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @GET("goods/details")
-    fun getDetails(@Query("goodsId") goodsId: Int): Call<DetailsData>
+    fun getDetails(@Query("goodsId") goodsId: Int): Call<DetailsResponse>
 
 }

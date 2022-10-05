@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.example.fish.ui.detail.DetailViewModel" />
@@ -12,7 +11,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#F6F6F9FF">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/item_list"

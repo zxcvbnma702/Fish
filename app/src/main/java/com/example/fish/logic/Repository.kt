@@ -153,7 +153,7 @@ object Repository{
     fun getDetails(goodsId: Int) = fire(Dispatchers.IO) {
         val response = FishNetwork.getDetails(goodsId)
         run {
-            Result.success(response)
+            Result.success(response.data)
         }
     }
 
