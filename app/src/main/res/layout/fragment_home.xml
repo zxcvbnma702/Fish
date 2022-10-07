@@ -50,6 +50,7 @@
                             android:theme="@style/SearchView"
                             app:defaultQueryHint="search"
                             app:iconifiedByDefault="true"
+                            android:clickable="true"
                             app:queryBackground="@android:color/transparent" />
 
                         <ImageView

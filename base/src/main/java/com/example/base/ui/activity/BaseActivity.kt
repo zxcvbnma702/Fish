@@ -1,20 +1,16 @@
 package com.example.base.ui.activity
 
 import android.Manifest
-import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
-import android.view.WindowManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.WindowCompat
-import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.WindowInsetsControllerCompat
 import androidx.databinding.ViewDataBinding
 import com.example.base.ui.`interface`.BaseBinding
 import com.example.base.ui.kxt.getViewBinding
 import com.example.base.ui.kxt.toast
+import com.example.base.ui.util.StatusUtil
 
 /**
  * @author:SunShibo
@@ -40,29 +36,13 @@ abstract class BaseActivity<VB : ViewDataBinding> : AppCompatActivity(), BaseBin
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         binding.initBindingView()
-
         initPermission()
-        initStatusBar()
+        initStatusBsr()
     }
 
-    /**
-     * StatusBar Style
-     */
     @RequiresApi(Build.VERSION_CODES.P)
-    private fun initStatusBar() {
-        window.statusBarColor = Color.TRANSPARENT
-
-        val controller = WindowInsetsControllerCompat(window, window.decorView)
-        controller.apply {
-            isAppearanceLightStatusBars = false
-            show(WindowInsetsCompat.Type.statusBars())
-        }
-        WindowCompat.setDecorFitsSystemWindows(window, true)
-
-        val params = window.attributes
-        params.layoutInDisplayCutoutMode =
-            WindowManager.LayoutParams.LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES
-        window.attributes = params
+    private fun initStatusBsr() {
+        StatusUtil.initActivityBar(this@BaseActivity, true)
     }
 
     @RequiresApi(Build.VERSION_CODES.R)
