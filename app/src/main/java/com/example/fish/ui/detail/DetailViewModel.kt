@@ -21,10 +21,10 @@ class DetailViewModel : ViewModel() {
 
     internal var data: DetailsData? = null
 
-    internal val tabList = listOf<TabData>(
-        TabData("Gallery", DetailAdapter.GALLERY, DetailAdapter.CONTENT),
+    internal val tabList = listOf(
+        TabData("GALLERY", DetailAdapter.GALLERY, DetailAdapter.CONTENT),
         TabData("REVIEWS", DetailAdapter.USER, DetailAdapter.COMMENT),
-        TabData("Recommend", DetailAdapter.RECOMMEND, DetailAdapter.OTHER)
+        TabData("RECOMMEND", DetailAdapter.RECOMMEND, DetailAdapter.OTHER)
     )
 
     /**

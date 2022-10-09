@@ -2,7 +2,6 @@ package com.example.fish.ui.detail
 
 import android.content.Context
 import android.content.Intent
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -77,11 +76,9 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
             mViewModel.data = data
             adapter.also {
                 it.setData(mViewModel.getItemList(mViewModel.data))
-                Log.e("fff", data.toString())
             }
         }
     }
-
 
     companion object {
         fun startActivity(context: Context, id: String) {

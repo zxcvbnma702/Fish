@@ -3,6 +3,7 @@ package com.example.fish.ui.detail.adapter
 import android.annotation.SuppressLint
 import android.app.Activity
 import android.graphics.Color
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -13,9 +14,9 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.base.ui.activity.BaseMultiTypeAdapter
 import com.example.base.ui.util.GlideEngine
 import com.example.fish.FishApplication
-import com.example.fish.R
 import com.example.fish.databinding.*
 import com.example.fish.logic.db.entity.Item
+import com.example.fish.logic.network.model.DetailsData
 
 /**
  * @author:SunShibo
@@ -44,12 +45,13 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
     ) {
         when (holder.binding) {
             is ItemGalleryBinding -> {
-                GalleryViewHolder(host, this.binding as ItemGalleryBinding)
+                GalleryViewHolder(item.data, host, this.binding as ItemGalleryBinding)
             }
 
             is ItemDetailTitleBinding -> {
                 val binding = this.binding as ItemDetailTitleBinding
                 binding.apply {
+                    Log.e("imageH", item.data.toString())
                     itemDetailTitleAddress.text = item.data?.addr
                     itemDetailTitleContent.text = item.data?.content
                     itemDetailTitlePrice.text = item.data?.price.toString()
@@ -86,7 +88,7 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
                             val newImage = ImageView(FishApplication.context)
                             val lp = LinearLayout.LayoutParams(
                                 LinearLayout.LayoutParams.MATCH_PARENT,
-                                LinearLayout.LayoutParams.MATCH_PARENT
+                                LinearLayout.LayoutParams.WRAP_CONTENT
                             )
                             lp.setMargins(0, 5, 0, 5)
                             newImage.apply {
@@ -109,7 +111,6 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
 
             is ItemHomeShopBinding -> {
                 val binding = this.binding as ItemHomeShopBinding
-
             }
         }
     }
@@ -130,11 +131,19 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
     override fun getItemViewType(position: Int): Int = getData()[position].viewType
 
     inner class GalleryViewHolder(
+        item: DetailsData?,
         private val host: Activity,
         private val binding: ItemGalleryBinding
     ) : RecyclerView.ViewHolder(binding.root) {
         init {
-            val galleryList = listOf(R.drawable.a, R.drawable.b)
+            var galleryList = mutableListOf<String>()
+            if (item != null) {
+                galleryList =
+                    when (item.imageUrlList.size) {
+                        1 -> mutableListOf(item.imageUrlList[0])
+                        else -> mutableListOf(item.imageUrlList[0], item.imageUrlList[1])
+                    }
+            }
             val gallerySize = galleryList.size
             binding.vpGallery.apply {
                 registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
@@ -144,7 +153,7 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
                     }
                 })
                 adapter = GalleryAdapter(host).apply {
-                    items = galleryList
+                    setData(galleryList)
                 }
             }
         }

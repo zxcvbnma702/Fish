@@ -32,7 +32,7 @@ public class GlideEngine implements ImageEngine {
         Glide.with(context)
                 .load(url)
                 .placeholder(R.drawable.a)
-                .centerCrop()
+                .transform(new CenterCrop(), new RoundedCorners(8))
                 .into(imageView);
     }
 
