@@ -5,6 +5,11 @@ import androidx.lifecycle.ViewModel
 import com.example.base.ui.kxt.toast
 import com.example.fish.FishApplication
 import com.example.fish.logic.Repository
+import com.luck.picture.lib.entity.LocalMedia
+import okhttp3.MediaType
+import okhttp3.MultipartBody
+import okhttp3.RequestBody
+import java.io.File
 
 /**
  * @author:SunShibo
@@ -12,6 +17,7 @@ import com.example.fish.logic.Repository
  * @feature:
  */
 class AppendViewModel: ViewModel() {
+
     private val userId = FishApplication.sp.getString(FishApplication.userID, "0")
 
     var types: MutableList<String> = mutableListOf()
@@ -28,10 +34,20 @@ class AppendViewModel: ViewModel() {
 
     internal var appendListener: AppendListener ?= null
 
+    var imageList: MutableList<LocalMedia> = mutableListOf()
 
     fun send(view: View){
-        if(checkNull()){
-            val response = Repository.postGoodInformation(address!!, content!!, imageCode, price!!, typeId!!, typeName!!, userId!!)
+        if(checkNull()) {
+            uploadFile()
+            val response = Repository.postGoodInformation(
+                address!!,
+                title!! + "\n" + content!!,
+                imageCode,
+                price!!,
+                typeId!!,
+                typeName!!,
+                userId!!
+            )
             appendListener?.onSendListener(response)
         }else{
             FishApplication.context.toast("请将商品信息填写完整")
@@ -39,20 +55,46 @@ class AppendViewModel: ViewModel() {
     }
 
     fun save(view: View){
-        if(checkNull()){
-            val response = Repository.saveGoodInformation(address!! , content!!, imageCode, price!!, typeId!!, typeName!!, userId!!)
+        if(checkNull()) {
+            uploadFile()
+            val response = Repository.saveGoodInformation(
+                address!!,
+                title!! + "\n" + content!!,
+                imageCode,
+                price!!,
+                typeId!!,
+                typeName!!,
+                userId!!
+            )
             appendListener?.onSaveListener(response)
         }else{
             FishApplication.context.toast("请将商品信息填写完整")
         }
     }
 
-    fun getGoodTypes(){
+    fun getGoodTypes() {
         val types = Repository.getGoodTypes()
         appendListener?.onGoodTypes(types)
     }
 
-    private fun checkNull(): Boolean{
+    private fun checkNull(): Boolean {
         return !(title == null || content == null || address == null || price == null || typeId == null || typeName == null)
+    }
+
+    fun uploadFile() {
+        val partList = createList()
+        val response = Repository.uploadMoreFiles(partList)
+        appendListener?.onUploadComplete(response)
+    }
+
+    private fun createList(): List<MultipartBody.Part> {
+        val parts: MutableList<MultipartBody.Part> = mutableListOf()
+        for (url in imageList) {
+            val file = File(url.realPath)
+            val body = RequestBody.create(MediaType.parse("multipart/form-data"), file)
+            val part = MultipartBody.Part.createFormData("fileList", file.name, body)
+            parts.add(part)
+        }
+        return parts
     }
 }

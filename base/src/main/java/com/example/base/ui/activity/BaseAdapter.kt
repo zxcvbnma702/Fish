@@ -108,6 +108,7 @@ abstract class BaseAdapter<T, VB : ViewDataBinding> :
 
     override fun onBindViewHolder(holder: BindViewHolder<VB>, position: Int) {
         with(holder.binding) {
+            holder.layoutPosition
             onBindViewHolder(getItem(position), position)
             executePendingBindings()
         }

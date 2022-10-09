@@ -1,6 +1,7 @@
 package com.example.fish.ui.home.adapter
 
 import com.example.base.ui.activity.BaseAdapter
+import com.example.base.ui.util.GlideEngine
 import com.example.fish.databinding.ItemHomeShopBinding
 import com.example.fish.logic.network.model.Record
 import com.example.fish.ui.home.HomeFragment
@@ -20,6 +21,10 @@ class HomeRecyclerAdapter(private val fragment: HomeFragment) :
         itemShopPrice.text = bean.price
         itemShopTitle.text = bean.id
         itemShopContent.text = bean.content
-        // todo itemShopAvator itemShopImage
+        if (bean.imageUrlList.isNotEmpty()) {
+            GlideEngine.createGlideEngine()
+                .loadImage(fragment.context, bean.imageUrlList[0], itemShopImage)
+        }
+        GlideEngine.createGlideEngine().loadImage(fragment.context, bean.avatar, itemShopAvator)
     }
 }

@@ -67,13 +67,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
     override fun onGoodTypes(types: LiveData<Result<List<TypeData>>>) {
         types.observe(this){result ->
             val res = result.getOrNull()
-            for(type in res!!) {
-                val tab = binding.homeTablayout.newTab()
-                tab.apply {
-                    text = type.type
-                    tag = type.id
+            if (res != null) {
+                for (type in res) {
+                    val tab = binding.homeTablayout.newTab()
+                    tab.apply {
+                        text = type.type
+                        tag = type.id
+                    }
+                    binding.homeTablayout.addTab(tab)
                 }
-                binding.homeTablayout.addTab(tab)
             }
         }
     }

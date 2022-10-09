@@ -2,7 +2,9 @@ package com.example.fish.logic.network
 
 import android.util.Log
 import com.example.fish.logic.network.api.GoodsService
+import com.example.fish.logic.network.api.ImageService
 import com.example.fish.logic.network.api.UserService
+import okhttp3.MultipartBody
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -18,6 +20,7 @@ import kotlin.coroutines.suspendCoroutine
 object FishNetwork {
     private val userServer = ServiceCreator.create<UserService>()
     private val goodsServer = ServiceCreator.create<GoodsService>()
+    private val imageServer = ServiceCreator.create<ImageService>()
 
     /**
      * login
@@ -62,6 +65,9 @@ object FishNetwork {
     //获取商品信息
     suspend fun getDetails(goodsId: Int) = goodsServer.getDetails(goodsId).await()
 
+    //upload file
+    suspend fun uploadFiles(requestBody: List<MultipartBody.Part>) =
+        imageServer.uploadMoreFiles(requestBody).await()
 
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->
@@ -70,8 +76,7 @@ object FishNetwork {
                     val body = response.body()
 //                    ToDo: delete this
                     Log.e("data", response.toString())
-
-                    if(body != null) continuation.resume(body)
+                    if (body != null) continuation.resume(body)
                     else continuation.resumeWithException(
                         RuntimeException("response body is null")
                     )

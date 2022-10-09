@@ -1,6 +1,7 @@
 package com.example.fish.ui.cart.adapter
 
 import com.example.base.ui.activity.BaseAdapter
+import com.example.base.ui.util.GlideEngine
 import com.example.fish.databinding.ItemCartSaveBinding
 import com.example.fish.logic.network.model.SaveListRecord
 import com.example.fish.ui.cart.CartFragment
@@ -17,10 +18,14 @@ class CartRecyclerAdapter(private val fragment: CartFragment) :
         itemCartSend.setOnClickListener {
             fragment.mViewModel.sendData(bean.id)
         }
-//        itemCartImage itemCartAvatar
         itemCartPrice.text = bean.price
         itemCartTitle.text = bean.id
         itemCartUsername.text = bean.username
-//        itemCartStatus.text = bean.status
+        if (bean.imageUrlList.isNotEmpty()) {
+            GlideEngine.createGlideEngine()
+                .loadImage(fragment.requireContext(), bean.imageUrlList[0], itemCartImage)
+        }
+        GlideEngine.createGlideEngine()
+            .loadImage(fragment.requireContext(), bean.avatar, itemCartAvatar)
     }
 }

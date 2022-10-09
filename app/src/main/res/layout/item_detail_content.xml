@@ -42,6 +42,7 @@
                 android:layout_height="match_parent">
 
                 <ImageView
+                    android:visibility="gone"
                     android:src="@drawable/b"
                     android:id="@+id/item_detail_comment_content"
                     android:layout_width="match_parent"

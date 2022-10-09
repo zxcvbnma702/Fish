@@ -38,6 +38,8 @@ dependencies {
     implementation rootProject.ext.depsLibs["design"]
     implementation rootProject.ext.depsLibs["glide"]
     implementation rootProject.ext.depsLibs["appcompact"]
+    implementation rootProject.ext.depsLibs["picture-selector"]
+    implementation rootProject.ext.depsLibs["picture-compress"]
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

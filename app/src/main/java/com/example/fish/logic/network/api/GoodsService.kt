@@ -4,7 +4,6 @@ import com.example.fish.FishApplication
 import com.example.fish.logic.network.model.*
 import retrofit2.Call
 import retrofit2.http.*
-import java.io.File
 
 /**
  * @author:SunShibo
@@ -44,11 +43,6 @@ interface GoodsService {
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @POST("goods/delete")
     fun deleteGoodInformation(@Query("goodsId")goodsId: Int, @Query("userId")userId: Int): Call<SaveResponse>
-
-    @Multipart
-    @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
-    @POST("goods/upload")
-    fun uploadFile(@Part list: ArrayList<File>): Call<UploadResponse>
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @GET("goods/save")

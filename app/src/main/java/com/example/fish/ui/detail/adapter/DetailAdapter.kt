@@ -2,11 +2,17 @@ package com.example.fish.ui.detail.adapter
 
 import android.annotation.SuppressLint
 import android.app.Activity
+import android.graphics.Color
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.LinearLayout
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.base.ui.activity.BaseMultiTypeAdapter
+import com.example.base.ui.util.GlideEngine
+import com.example.fish.FishApplication
 import com.example.fish.R
 import com.example.fish.databinding.*
 import com.example.fish.logic.db.entity.Item
@@ -17,28 +23,6 @@ import com.example.fish.logic.db.entity.Item
  * @feature:
  */
 class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
-
-
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-//        return if (viewType == GALLERY) {
-//            GalleryViewHolder(host, ItemGalleryBinding.inflate(host.layoutInflater, parent, false))
-//        } else {
-//            NormalViewHolder(ItemNoramlBinding.inflate(host.layoutInflater, parent, false))
-//        }
-//    }
-//
-//    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-//        when (holder) {
-//            is NormalViewHolder -> {
-//                holder.bind(items[position])
-//            }
-//            is GalleryViewHolder -> {
-//                //
-//            }
-//            else -> throw IllegalArgumentException("Not support")
-//        }
-//    }
-
 
     /**
      * Item type
@@ -78,28 +62,52 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
                 binding.apply {
                     itemDetailTitleUsername.text = item.data?.username
                     itemDetailUserAddress.text = item.data?.addr
-//                    todo itemDetailUserEvatar
+                    GlideEngine.createGlideEngine()
+                        .loadImage(host.applicationContext, item.data?.avatar, itemDetailUserEvatar)
                 }
             }
 
             is ItemDetailCommentBinding -> {
                 val binding = this.binding as ItemDetailCommentBinding
                 binding.apply {
-//                    todo itemDetailCommentEvatar
+                    GlideEngine.createGlideEngine().loadImage(
+                        host.applicationContext,
+                        item.data?.avatar,
+                        itemDetailCommentEvatar
+                    )
                 }
             }
 
             is ItemDetailContentBinding -> {
                 val binding = this.binding as ItemDetailContentBinding
                 binding.itemDetailCommentContainer.apply {
-//                    todo addView
+                    if (item.data?.imageUrlList != null) {
+                        for (url in item.data.imageUrlList) {
+                            val newImage = ImageView(FishApplication.context)
+                            val lp = LinearLayout.LayoutParams(
+                                LinearLayout.LayoutParams.MATCH_PARENT,
+                                LinearLayout.LayoutParams.MATCH_PARENT
+                            )
+                            lp.setMargins(0, 5, 0, 5)
+                            newImage.apply {
+                                layoutParams = lp
+                                GlideEngine.createGlideEngine()
+                                    .loadImage(host.applicationContext, url, this)
+                                setBackgroundColor(Color.YELLOW)
+                            }
+                            addView(newImage)
+                        }
+                    } else {
+                        binding.itemDetailCommentContent.apply {
+                            visibility = View.VISIBLE
+                        }
+                    }
                 }
             }
 
             is ItemDetailRecommendBinding -> {}
 
             is ItemHomeShopBinding -> {
-//                NormalViewHolder(this.binding as ItemNoramlBinding).bind(item)
                 val binding = this.binding as ItemHomeShopBinding
 
             }

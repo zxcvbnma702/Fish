@@ -47,7 +47,7 @@
     <string name="append_title">发布</string>
     <string name="append_send">发布</string>
     <string name="append_picture">添加图片</string>
-    <string name="append_address">发货地: 天津 津南区</string>
+    <string name="append_address">发货地:</string>
     <string name="append_price">价格</string>
     <string name="append_price_dig">￥0.00</string>
     <string name="append_same">同款宝贝</string>
@@ -59,6 +59,9 @@
     <string name="append_send_toast_failure">商品信息发送失败</string>
     <string name="append_save_toast_success">商品信息暂存成功</string>
     <string name="append_save_toast_failure">商品信息暂存失败</string>
+    <string name="append_title_hint">标题</string>
+    <string name="append_content_hint">内容</string>
+    <string name="append_default_address">吉林省 松原市</string>
 
     <!-- cartFragment   -->
     <string name="cart_shop_item_yuan">¥</string>

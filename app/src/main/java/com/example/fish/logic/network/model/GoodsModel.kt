@@ -39,12 +39,12 @@ data class Record(
     var addr: String,
     var appIsShare: Int,
     var appKey: String,
-    var avatar: Any,
+    var avatar: String,
     var content: String,
     var createTime: String,
     var id: String,
     var imageCode: String,
-    var imageUrlList: List<Any>,
+    var imageUrlList: List<String>,
     var price: String,
     var status: Int,
     var tUserId: String,
@@ -176,12 +176,12 @@ data class DetailsData(
     val addr: String,
     val appIsShare: Int,
     val appKey: String,
-    val avatar: Any,
+    val avatar: String,
     val content: String,
     val createTime: String,
     val id: String,
     val imageCode: String,
-    val imageUrlList: List<Any>,
+    val imageUrlList: List<String>,
     val price: Int,
     val status: Int,
     val tUserId: String,
@@ -190,6 +190,8 @@ data class DetailsData(
     val typeName: String,
     val username: String
 )
+
+
 
 
 

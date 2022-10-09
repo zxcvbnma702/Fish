@@ -1,9 +1,8 @@
 package com.example.fish.ui.append
 
 import androidx.lifecycle.LiveData
-import com.example.fish.logic.network.model.AddData
-import com.example.fish.logic.network.model.SaveData
 import com.example.fish.logic.network.model.TypeData
+import com.example.fish.logic.network.model.UploadData
 
 /**
  * @author:SunShibo
@@ -16,4 +15,6 @@ interface AppendListener {
     fun onSaveListener(response: LiveData<Result<String>>)
 
     fun onGoodTypes(types: LiveData<Result<List<TypeData>>>)
+
+    fun onUploadComplete(response: LiveData<Result<UploadData>>)
 }

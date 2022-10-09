@@ -1,5 +1,6 @@
 package com.example.fish.logic
 
+import android.util.Log
 import androidx.lifecycle.liveData
 import com.example.fish.FishApplication
 import com.example.fish.logic.db.AppDatabase
@@ -7,6 +8,7 @@ import com.example.fish.logic.db.entity.User
 import com.example.fish.logic.network.FishNetwork
 import com.example.fish.logic.network.model.Data
 import kotlinx.coroutines.Dispatchers
+import okhttp3.MultipartBody
 import kotlin.coroutines.CoroutineContext
 
 /**
@@ -152,6 +154,14 @@ object Repository{
 
     fun getDetails(goodsId: Int) = fire(Dispatchers.IO) {
         val response = FishNetwork.getDetails(goodsId)
+        run {
+            Result.success(response.data)
+        }
+    }
+
+    fun uploadMoreFiles(requestBody: List<MultipartBody.Part>) = fire(Dispatchers.IO) {
+        val response = FishNetwork.uploadFiles(requestBody)
+        Log.e("file_response", response.toString())
         run {
             Result.success(response.data)
         }
