@@ -88,4 +88,21 @@
     <string name="detail_item_recommend">为你推荐</string>
 
 
+
+    <!-- message -->
+    <string name="message_info">消息</string>
+    <string name="message_string_bell_up">通知信息</string>
+    <string name="message_string_bell_down">还没有新通知~</string>
+    <string name="message_string_thumb_up_up">互动信息</string>
+    <string name="message_string_thumb_up_down">还没有互动信息~</string>
+    <string name="message_string_offer_up">闲鱼情报社</string>
+    <string name="message_string_offer_down">【11条】您感兴趣的erd类商品…</string>
+    <string name="message_string_identity_up">买家小助手</string>
+    <string name="message_string_identity_down">【4条】换钱、腾空间两不误！</string>
+    <string name="message_string_smile_up">会玩精选</string>
+    <string name="message_string_smile_down">“小猫咪~”</string>
+    <string name="message_string_anchor_up">闲小蜜</string>
+    <string name="message_string_anchor_down">新人安心购领取</string>
+
+
 </resources>
