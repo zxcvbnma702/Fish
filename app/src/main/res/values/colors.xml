@@ -26,4 +26,12 @@
     <color name="colo_bac">#f8f8f8</color>
     <color name="colo_yellow">#FEC62E</color>
     <color name="colo_red">#E53935</color>
+
+
+    <!--   Message -->
+    <color name="message_thumb_up">#FF5733</color>
+    <color name="message_offer">#67E0A2</color>
+    <color name="message_identity">#A8F3FF</color>
+    <color name="message_smile">#FFEB3B</color>
+    <color name="message_anchor">#FFEE52</color>
 </resources>
