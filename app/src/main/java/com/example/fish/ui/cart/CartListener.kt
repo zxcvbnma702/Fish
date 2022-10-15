@@ -1,8 +1,6 @@
 package com.example.fish.ui.cart
 
 import androidx.lifecycle.LiveData
-import com.example.fish.logic.network.model.Record
-import com.example.fish.logic.network.model.SaveListData
 import com.example.fish.logic.network.model.SaveListRecord
 
 /**
@@ -12,5 +10,7 @@ import com.example.fish.logic.network.model.SaveListRecord
  */
 interface CartListener {
     fun onSaveListResponse(saveList: LiveData<Result<List<SaveListRecord>>>)
+    fun onPostListResponse(saveList: LiveData<Result<List<SaveListRecord>>>)
     fun onPostSaveResponse(response: LiveData<Result<Int>>)
+    fun onDeletePostResponse(response: LiveData<Result<String>>)
 }

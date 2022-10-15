@@ -15,16 +15,26 @@ class CartViewModel: ViewModel() {
 
     var saveList: MutableList<SaveListRecord> = mutableListOf()
 
-    internal var cartListener: CartListener?= null
+    internal var cartListener: CartListener? = null
 
-    fun getSaveList(){
+    fun getSaveList() {
         val saveList = Repository.getSaveListInformation(userId!!.toInt())
         cartListener!!.onSaveListResponse(saveList)
     }
 
+    fun getPostList() {
+        val postList = Repository.getPostListInformation(userId!!.toInt())
+        cartListener!!.onPostListResponse(postList)
+    }
+
     fun sendData(id: String) {
-        val response = Repository.postSaveGoodInformation(id ,userId!!)
+        val response = Repository.postSaveGoodInformation(id, userId!!)
         cartListener!!.onPostSaveResponse(response)
+    }
+
+    fun deleteData(id: String) {
+        val response = Repository.deleteGoodInformation(id.toInt(), userId!!.toInt())
+        cartListener!!.onDeletePostResponse(response)
     }
 
 }

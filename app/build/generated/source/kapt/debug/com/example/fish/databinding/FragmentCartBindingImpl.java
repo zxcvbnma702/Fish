@@ -14,7 +14,9 @@ public class FragmentCartBindingImpl extends FragmentCartBinding  {
     static {
         sIncludes = null;
         sViewsWithIds = new android.util.SparseIntArray();
-        sViewsWithIds.put(R.id.cart_recyclerView, 1);
+        sViewsWithIds.put(R.id.cart_saved, 1);
+        sViewsWithIds.put(R.id.cart_posted, 2);
+        sViewsWithIds.put(R.id.cart_recyclerView, 3);
     }
     // views
     // variables
@@ -23,11 +25,13 @@ public class FragmentCartBindingImpl extends FragmentCartBinding  {
     // Inverse Binding Event Handlers
 
     public FragmentCartBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 2, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
     }
     private FragmentCartBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
-            , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (android.widget.TextView) bindings[2]
+            , (androidx.recyclerview.widget.RecyclerView) bindings[3]
+            , (android.widget.TextView) bindings[1]
             , (androidx.swiperefreshlayout.widget.SwipeRefreshLayout) bindings[0]
             );
         this.cartSwipe.setTag(null);

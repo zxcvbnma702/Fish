@@ -29,7 +29,8 @@ object FishNetwork {
 
     suspend fun login(requestBody: Map<String, String>) = userServer.loginAccount(requestBody).await()
 
-    suspend fun register(requestBody: Map<String, String>) = userServer.registerAccount(requestBody).await()
+    suspend fun register(requestBody: Map<String, String>) =
+        userServer.registerAccount(requestBody).await()
 
     /**
      * goods
@@ -37,10 +38,18 @@ object FishNetwork {
 
     //获取商品类型
     suspend fun getGoodTypes() = goodsServer.getGoodTypes().await()
+
     //获取各类型商品
-    suspend fun getTypeGoods(userId: Int, typeId: Int, size: Int) = goodsServer.getTypeGoods(userId, typeId, size).await()
+    suspend fun getTypeGoods(userId: Int, typeId: Int, size: Int) =
+        goodsServer.getTypeGoods(userId, typeId, size).await()
+
+    //搜索商品信息
+    suspend fun getTypeGoods(userId: Int, keyword: String, size: Int) =
+        goodsServer.getSearchGoods(userId, keyword, size).await()
+
     //暂存商品信息
-    suspend fun saveGoodInformation(requestBody: Map<String, String>) = goodsServer.saveGoodInformation(requestBody).await()
+    suspend fun saveGoodInformation(requestBody: Map<String, String>) =
+        goodsServer.saveGoodInformation(requestBody).await()
 
     //发布商品信息
     suspend fun postGoodInformation(requestBody: Map<String, String>) =
@@ -61,6 +70,10 @@ object FishNetwork {
     //获取草稿信息
     suspend fun getSaveGoodInformation(userId: Int) =
         goodsServer.getSaveGoodInformation(userId).await()
+
+    //获取已发布信息
+    suspend fun getPostGoodInformation(userId: Int) =
+        goodsServer.getPostGoodInformation(userId).await()
 
     //获取商品信息
     suspend fun getDetails(goodsId: Int) = goodsServer.getDetails(goodsId).await()

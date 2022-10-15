@@ -22,30 +22,28 @@
 
             <RelativeLayout
                 android:id="@+id/relativeLayout"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:padding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/append_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/shape_white"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:gravity="center"
                     android:paddingStart="15dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/append_cancel"
-                    android:clickable="true"
                     android:textColor="@color/text_black"
-                    android:textSize="14sp"
-                    android:focusable="true" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/append_test"
@@ -53,16 +51,17 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="80dp"
                     android:background="@drawable/shape_white"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:gravity="center"
                     android:paddingStart="15dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="上传"
-                    android:clickable="true"
+                    android:visibility="gone"
                     android:textColor="@color/text_black"
-                    android:textSize="14sp"
-                    android:focusable="true" />
+                    android:textSize="14sp" />
 
 
                 <TextView
@@ -72,15 +71,15 @@
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="80dp"
                     android:background="@drawable/shape_white"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:onClick="@{viewModel::save}"
                     android:paddingStart="15dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/append_save_temp"
-                    android:clickable="true"
-                    android:textSize="14sp"
-                    android:focusable="true" />
+                    android:textSize="14sp" />
 
                 <TextView
                     android:id="@+id/append_send"
@@ -88,15 +87,15 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:background="@drawable/shape_yellow"
+                    android:clickable="true"
+                    android:focusable="true"
                     android:onClick="@{viewModel::send}"
                     android:paddingStart="15dp"
                     android:paddingTop="5dp"
                     android:paddingEnd="15dp"
                     android:paddingBottom="5dp"
                     android:text="@string/append_send"
-                    android:clickable="true"
-                    android:textSize="14sp"
-                    android:focusable="true" />
+                    android:textSize="14sp" />
 
             </RelativeLayout>
 
@@ -107,40 +106,38 @@
                 android:layout_margin="10dp"
                 android:background="@drawable/shape_white"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
-                app:layout_constraintVertical_bias="0.0">
+                app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
                 <EditText
                     android:id="@+id/append_content_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:autofillHints="text"
                     android:background="@null"
                     android:hint="@string/append_title_hint"
+                    android:inputType="text"
                     android:padding="10dp"
                     android:text="@={viewModel.title}"
                     android:textColor="@color/text_main"
                     android:textColorHint="@color/lightGrey"
-                    android:textSize="16sp"
-                    android:autofillHints="text"
-                    android:inputType="text" />
+                    android:textSize="16sp" />
 
                 <EditText
                     android:id="@+id/append_content"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp"
+                    android:layout_height="117dp"
+                    android:autofillHints="text"
                     android:background="@null"
                     android:gravity="start|top"
                     android:hint="@string/append_content_hint"
+                    android:inputType="text"
                     android:padding="10dp"
                     android:text="@={viewModel.content}"
                     android:textColor="@color/text_main"
                     android:textColorHint="@color/lightGrey"
-                    android:textSize="16sp"
-                    android:autofillHints="text"
-                    android:inputType="text" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -151,7 +148,6 @@
                 android:background="@drawable/shape_white"
                 android:orientation="vertical"
                 android:padding="10dp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/linearLayout"
@@ -191,9 +187,8 @@
                         android:gravity="center_vertical"
                         android:layout_gravity="center_vertical"
                         android:id="@+id/append_address"
-                        android:layout_width="0dp"
+                        android:layout_width="wrap_content"
                         android:layout_height="match_parent"
-                        android:layout_weight="1"
                         android:textSize="13sp"
                         android:hint="@string/append_address" />
 
@@ -206,7 +201,7 @@
                         android:textColorHint="@color/lightGrey"
                         android:paddingTop="5dp"
                         android:textSize="14sp"
-                        android:layout_weight="7"
+                        android:layout_weight="1"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:hint="@string/append_default_address"
@@ -300,6 +295,7 @@
                         android:text="@string/append_same_value"
                         android:textColor="@color/text_main1"
                         android:textSize="16sp"
+                        android:maxLines="1"
                         app:drawableEndCompat="@drawable/append_right" />
                 </LinearLayout>
 

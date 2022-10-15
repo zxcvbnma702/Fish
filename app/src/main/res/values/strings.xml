@@ -71,6 +71,8 @@
     <string name="cart_refresh">刷新完成</string>
     <string name="cart_send_success">发送成功</string>
     <string name="cart_send_failure">发送失败</string>
+    <string name="cart_delete_success">删除成功</string>
+    <string name="cart_delete_failure">删除失败</string>
 
     <!-- detailActivity   -->
     <string name="detail_item_want">9999 浏览 | 9999人 想要</string>
@@ -103,6 +105,7 @@
     <string name="message_string_smile_down">“小猫咪~”</string>
     <string name="message_string_anchor_up">闲小蜜</string>
     <string name="message_string_anchor_down">新人安心购领取</string>
+    <string name="cart_title2">已发布</string>
 
 
 </resources>
