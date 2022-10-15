@@ -87,5 +87,8 @@
     <string name="detail_item_detail">详情</string>
     <string name="detail_item_recommend">为你推荐</string>
 
+    <string name="person_title">个人中心</string>
+    <string name="person_default">dd</string>
+
 
 </resources>

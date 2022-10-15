@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+<!--        页面头编辑资料-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginStart="20dp">
+
+            <ImageView
+                android:id="@+id/edit_information_no_ok"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/modinf_nook_dd">
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="20dp"
+                android:text="编辑资料"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/edit_information_ok"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="123dp"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/modinf_ok_dd">
+            </ImageView>
+        </LinearLayout>
+
+<!--        头像设置-->
+        <ImageView
+            android:id="@+id/head_portrait_settings"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_marginStart="123dp"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/person_picture_dd">
+        </ImageView>
+
+<!--        具体编辑框-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+<!--昵称-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="昵称"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+<!--真实姓名-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="真实姓名"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+<!--邮箱-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="邮箱"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+
+<!--手机号码-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="手机号码"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+
+<!--座右铭            -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="座右铭"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+
+<!--            常住地区-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="常住地区"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:layout_width="370dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"/>
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</layout>
