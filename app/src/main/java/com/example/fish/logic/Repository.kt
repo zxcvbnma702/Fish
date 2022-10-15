@@ -9,6 +9,7 @@ import com.example.fish.logic.network.FishNetwork
 import com.example.fish.logic.network.model.Data
 import kotlinx.coroutines.Dispatchers
 import okhttp3.MultipartBody
+import okhttp3.RequestBody
 import kotlin.coroutines.CoroutineContext
 
 /**
@@ -164,6 +165,13 @@ object Repository{
         Log.e("file_response", response.toString())
         run {
             Result.success(response.data)
+        }
+    }
+
+    fun uploadAvatar(requestBody: Map<String, String>) = fire(Dispatchers.IO){
+        val response = FishNetwork.uploadAvatar(requestBody)
+        run {
+            Result.success(response)
         }
     }
 

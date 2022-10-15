@@ -24,4 +24,8 @@ interface UserService {
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @POST("user/register")
     fun registerAccount(@Body requestBody: Map<String, String>): Call<VerifyResponse>
+
+    @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
+    @POST("user/update")
+    fun uploadAvatar(@Body requestBody: Map<String, String>): Call<VerifyResponse>
 }

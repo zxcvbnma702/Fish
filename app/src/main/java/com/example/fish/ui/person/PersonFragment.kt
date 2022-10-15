@@ -6,6 +6,8 @@ import com.example.fish.databinding.FragmentPersonBinding
 
 class PersonFragment : BaseFragment<FragmentPersonBinding>() {
     override fun FragmentPersonBinding.initBindingView() {
+        settingButton.setOnClickListener {
 
+        }
     }
 }

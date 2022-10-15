@@ -69,6 +69,9 @@ object FishNetwork {
     suspend fun uploadFiles(requestBody: List<MultipartBody.Part>) =
         imageServer.uploadMoreFiles(requestBody).await()
 
+    suspend fun uploadAvatar(requestBody: Map<String, String>) =
+        userServer.uploadAvatar(requestBody)
+
     private suspend fun <T> Call<T>.await(): T {
         return suspendCoroutine { continuation ->
             enqueue(object : Callback<T> {
