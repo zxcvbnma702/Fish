@@ -32,12 +32,48 @@ class HomeViewModel: ViewModel() {
                 11,
                 "ss",
                 "aa"
-            )
+            ),
+        Record(
+            "1",
+            0,
+            "1",
+            "https://static.leetcode.cn/cn-mono-assets/production/assets/logo-dark-cn.c42314a8.svg",
+            "这个分类没有商品,看看其他分类吧!",
+            "1663588311823",
+            "35",
+            "22",
+            listOf("https://static.leetcode.cn/cn-mono-assets/production/assets/logo-dark-cn.c42314a8.svg"),
+            11.toString(),
+            11,
+            "11",
+            "11",
+            11,
+            "ss",
+            "aa"
+        ),
+        Record(
+            "1",
+            0,
+            "1",
+            "https://static.leetcode.cn/cn-mono-assets/production/assets/logo-dark-cn.c42314a8.svg",
+            "这个分类没有商品,看看其他分类吧!",
+            "1663588311823",
+            "35",
+            "22",
+            listOf("https://static.leetcode.cn/cn-mono-assets/production/assets/logo-dark-cn.c42314a8.svg"),
+            11.toString(),
+            11,
+            "11",
+            "11",
+            11,
+            "ss",
+            "aa"
+        )
     )
 
     var typeId = 1
 
-    var searchText: String? = null
+    var searchText: String = ""
 
     private val recyclerSize = 20
 

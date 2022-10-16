@@ -88,6 +88,10 @@
     <string name="detail_all_comment">点击查看全部留言</string>
     <string name="detail_item_detail">详情</string>
     <string name="detail_item_recommend">为你推荐</string>
+    <string name="detail_same">卖同款</string>
+    <string name="detail_buy">我想要</string>
+    <string name="detail_same_text">没有这个接口,别卖了…</string>
+    <string name="detail_buy_text">这个接口有问题,别买了…</string>
 
 
     <!-- message -->

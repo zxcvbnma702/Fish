@@ -16,6 +16,9 @@ public class ActivityDetailBindingImpl extends ActivityDetailBinding  {
         sViewsWithIds = new android.util.SparseIntArray();
         sViewsWithIds.put(R.id.item_list, 1);
         sViewsWithIds.put(R.id.tab_layout, 2);
+        sViewsWithIds.put(R.id.linearLayout, 3);
+        sViewsWithIds.put(R.id.detail_same, 4);
+        sViewsWithIds.put(R.id.detail_buy, 5);
     }
     // views
     @NonNull
@@ -26,11 +29,14 @@ public class ActivityDetailBindingImpl extends ActivityDetailBinding  {
     // Inverse Binding Event Handlers
 
     public ActivityDetailBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 3, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 6, sIncludes, sViewsWithIds));
     }
     private ActivityDetailBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
+            , (android.widget.TextView) bindings[5]
+            , (android.widget.TextView) bindings[4]
             , (androidx.recyclerview.widget.RecyclerView) bindings[1]
+            , (androidx.appcompat.widget.LinearLayoutCompat) bindings[3]
             , (com.google.android.material.tabs.TabLayout) bindings[2]
             );
         this.mboundView0 = (androidx.constraintlayout.widget.ConstraintLayout) bindings[0];

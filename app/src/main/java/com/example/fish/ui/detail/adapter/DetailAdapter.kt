@@ -9,14 +9,13 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.databinding.ViewDataBinding
-import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.ViewPager2
 import com.example.base.ui.activity.BaseMultiTypeAdapter
 import com.example.base.ui.util.GlideEngine
+import com.example.base.ui.util.UIUtils
 import com.example.fish.FishApplication
 import com.example.fish.databinding.*
 import com.example.fish.logic.db.entity.Item
-import com.example.fish.logic.network.model.DetailsData
 
 /**
  * @author:SunShibo
@@ -45,7 +44,29 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
     ) {
         when (holder.binding) {
             is ItemGalleryBinding -> {
-                GalleryViewHolder(item.data, host, this.binding as ItemGalleryBinding)
+                var galleryList: MutableList<String> = mutableListOf()
+                var gallerySize: Int = 1
+                if (item.data?.imageUrlList != null) {
+                    galleryList = when (item.data.imageUrlList.size) {
+                        1 -> mutableListOf(item.data.imageUrlList[0])
+                        0 -> mutableListOf()
+                        else -> mutableListOf(item.data.imageUrlList[0], item.data.imageUrlList[1])
+                    }
+                    gallerySize = galleryList.size
+                }
+                Log.e("size", gallerySize.toString())
+                val binding = this.binding as ItemGalleryBinding
+                binding.vpGallery.apply {
+                    registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+                        @SuppressLint("SetTextI18n")
+                        override fun onPageSelected(position: Int) {
+                            binding.tvIndex.text = "${(position + 1)} / $gallerySize"
+                        }
+                    })
+                    adapter = GalleryAdapter(host).apply {
+                        setData(galleryList)
+                    }
+                }
             }
 
             is ItemDetailTitleBinding -> {
@@ -55,7 +76,8 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
                     itemDetailTitleAddress.text = item.data?.addr
                     itemDetailTitleContent.text = item.data?.content
                     itemDetailTitlePrice.text = item.data?.price.toString()
-                    itemDetailTitleTime.text = item.data?.createTime
+                    itemDetailTitleTime.text =
+                        item.data?.createTime?.let { UIUtils.stampToDate(it) }
                 }
             }
 
@@ -130,32 +152,4 @@ class DetailAdapter(private val host: Activity) : BaseMultiTypeAdapter<Item>() {
 
     override fun getItemViewType(position: Int): Int = getData()[position].viewType
 
-    inner class GalleryViewHolder(
-        item: DetailsData?,
-        private val host: Activity,
-        private val binding: ItemGalleryBinding
-    ) : RecyclerView.ViewHolder(binding.root) {
-        init {
-            var galleryList = mutableListOf<String>()
-            if (item != null) {
-                galleryList =
-                    when (item.imageUrlList.size) {
-                        1 -> mutableListOf(item.imageUrlList[0])
-                        else -> mutableListOf(item.imageUrlList[0], item.imageUrlList[1])
-                    }
-            }
-            val gallerySize = galleryList.size
-            binding.vpGallery.apply {
-                registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                    @SuppressLint("SetTextI18n")
-                    override fun onPageSelected(position: Int) {
-                        binding.tvIndex.text = "${(position + 1)} / $gallerySize"
-                    }
-                })
-                adapter = GalleryAdapter(host).apply {
-                    setData(galleryList)
-                }
-            }
-        }
-    }
 }

@@ -3,6 +3,8 @@ package com.example.fish.ui.home
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.util.Log
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -21,6 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
     SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var myAdapter: HomeRecyclerAdapter
+    private lateinit var myAdapter2: HomeRecyclerAdapter
     private val mViewModel: HomeViewModel by lazy {
         ViewModelProvider(
             this,
@@ -35,6 +38,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
         mViewModel.getGoodTypes()
 
         myAdapter = HomeRecyclerAdapter(this@HomeFragment)
+        myAdapter2 = HomeRecyclerAdapter(this@HomeFragment)
 
         homeRecyclerView.adapter = myAdapter
 
@@ -67,10 +71,29 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
                 hideSearchView(true)
             }
             setOnCloseListener {
+                mViewModel.getTypeGoods()
                 hideSearchView(false)
                 false
             }
         }
+
+        homeSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean = true
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                var queryText = ""
+
+                if (newText != null) {
+                    queryText += newText
+                    mViewModel.apply {
+                        searchText = queryText
+                        getSearchGoods()
+                    }
+                }
+                Log.e("search", mViewModel.searchText)
+                return false
+            }
+        })
     }
 
     /**
@@ -109,7 +132,12 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
     }
 
     override fun onSearchGoods(data: LiveData<Result<AllData>>?) {
-        TODO("Not yet implemented")
+        data?.observe(this@HomeFragment) { result ->
+            val searchResponse = result.getOrNull()
+            if (searchResponse != null) {
+                myAdapter2.setData(searchResponse.records)
+            }
+        }
     }
 
     internal fun jumpTo(item: Record) {
@@ -148,6 +176,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
                     duration = 500
                     start()
                 }
+                homeRecyclerView.adapter = myAdapter2
             }
         } else {
             binding.apply {
@@ -161,6 +190,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
                     duration = 500
                     start()
                 }
+                homeRecyclerView.adapter = myAdapter
             }
         }
     }

@@ -7,8 +7,10 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.base.ui.activity.BaseActivity
+import com.example.base.ui.kxt.toast
 import com.example.base.ui.util.TabLayoutMediator2
 import com.example.base.ui.util.UIUtils
+import com.example.fish.R
 import com.example.fish.databinding.ActivityDetailBinding
 import com.example.fish.logic.network.model.DetailsData
 import com.example.fish.ui.detail.adapter.DetailAdapter
@@ -38,6 +40,14 @@ class DetailActivity : BaseActivity<ActivityDetailBinding>(), DetailsListener {
 
         itemList.adapter = adapter.also {
             it.setData(mViewModel.getItemList(mViewModel.data))
+        }
+
+        detailBuy.setOnClickListener {
+            toast(R.string.detail_buy_text)
+        }
+
+        detailSame.setOnClickListener {
+            toast(R.string.detail_same_text)
         }
 
         itemList.addOnScrollListener(object : RecyclerView.OnScrollListener() {

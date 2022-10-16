@@ -10,6 +10,10 @@
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/append_right.xml" value="0.201" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/append_type_selector.xml" value="0.196" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/button_bg.xml" value="0.2505" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/detail_buy_bg.xml" value="0.21" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/detail_item_title.xml" value="0.21" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/detail_same_bg.xml" value="0.21" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/detail_same_g.xml" value="0.21" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/edittext_bg.xml" value="0.2505" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/home_bg.xml" value="0.235" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/home_shop_item.xml" value="0.238" />
@@ -34,7 +38,7 @@
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/tab_selected_inicator.xml" value="0.1" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/drawable/test.xml" value="0.2495" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout-v26/fragment_home.xml" value="0.24479166666666666" />
-        <entry key="..\:/StudyItem/fish/app/src/main/res/layout/activity_detail.xml" value="0.24479166666666666" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/layout/activity_detail.xml" value="0.1" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/activity_login.xml" value="0.1" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/activity_search.xml" value="0.1" />
@@ -55,7 +59,7 @@
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_comment.xml" value="0.5405041843541191" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_content.xml" value="0.4033613316075515" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_recommend.xml" value="0.20168066580377575" />
-        <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_title.xml" value="0.1" />
+        <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_title.xml" value="0.4033613316075515" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_title_one.xml" value="0.24375" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detail_user.xml" value="0.3192982456140351" />
         <entry key="..\:/StudyItem/fish/app/src/main/res/layout/item_detailcomment_.xml" value="0.5730337078651685" />
