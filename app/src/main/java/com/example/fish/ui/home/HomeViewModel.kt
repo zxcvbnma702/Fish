@@ -32,22 +32,30 @@ class HomeViewModel: ViewModel() {
                 11,
                 "ss",
                 "aa"
-            ))
+            )
+    )
 
     var typeId = 1
 
+    var searchText: String? = null
+
     private val recyclerSize = 20
 
-    internal var homeListener: HomeListener ?= null
+    internal var homeListener: HomeListener? = null
 
-    fun getGoodTypes(){
+    fun getGoodTypes() {
         val types = Repository.getGoodTypes()
         homeListener?.onGoodTypes(types)
     }
 
-    fun getTypeGoods(){
+    fun getTypeGoods() {
         val data = Repository.getTypeGoods(userId!!.toInt(), typeId, recyclerSize)
         homeListener?.onTypeGoods(data)
+    }
+
+    fun getSearchGoods() {
+        val data = searchText?.let { Repository.getSearchGoods(userId!!.toInt(), it, recyclerSize) }
+        homeListener?.onSearchGoods(data)
     }
 
 }
