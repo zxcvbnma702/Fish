@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                                   
+
+    <LinearLayout
+        android:id="@+id/type_container"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/append_type_selector" android:tag="layout/item_append_type_0" xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:gravity="center"
+            android:id="@+id/type"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_width="60dp"
+            android:layout_height="40dp"></TextView>
+
+    </LinearLayout>
+         
+

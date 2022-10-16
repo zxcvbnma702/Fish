@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/tools">
+    <color name="black">#FF000000</color>
+    <color name="colo_bac">#f8f8f8</color>
+    <color name="colo_blue">#2196F3</color>
+    <color name="colo_money">#ff4757</color>
+    <color name="colo_red">#E53935</color>
+    <color name="colo_white">#fff</color>
+    <color name="colo_yellow">#FEC62E</color>
+    <color name="color_link">#f0f0f0</color>
+    <color name="lightGrey">#EAEAEA</color>
+    <color name="main_color">#FFEE52</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="textDescription">#686868</color>
+    <color name="textGray">#991f3349</color>
+    <color name="textHeadline">#434343</color>
+    <color name="text_black">#4E5157</color>
+    <color name="text_main">#49496a</color>
+    <color name="text_main1">#838895</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">fish</string>
+    <string name="append_address">发货地:</string>
+    <string name="append_cancel">取消</string>
+    <string name="append_content_hint">内容</string>
+    <string name="append_default_address">吉林省 松原市</string>
+    <string name="append_more_value">商品类型</string>
+    <string name="append_picture">添加图片</string>
+    <string name="append_price">价格</string>
+    <string name="append_price_dig">￥0.00</string>
+    <string name="append_same">同款宝贝</string>
+    <string name="append_same_value">关联同款后,将推荐想买的人</string>
+    <string name="append_save_temp">存草稿</string>
+    <string name="append_save_toast_failure">商品信息暂存失败</string>
+    <string name="append_save_toast_success">商品信息暂存成功</string>
+    <string name="append_send">发布</string>
+    <string name="append_send_toast_failure">商品信息发送失败</string>
+    <string name="append_send_toast_success">商品信息发送成功</string>
+    <string name="append_title">发布</string>
+    <string name="append_title_hint">标题</string>
+    <string name="append_toast">请将商品信息填写完整</string>
+    <string name="cart_item_send">发布</string>
+    <string name="cart_refresh">刷新完成</string>
+    <string name="cart_send_failure">发送失败</string>
+    <string name="cart_send_success">发送成功</string>
+    <string name="cart_shop_item_text">没人想要</string>
+    <string name="cart_shop_item_yuan">¥</string>
+    <string name="cart_title">待发布</string>
+    <string name="detail_add">关注</string>
+    <string name="detail_all_comment">点击查看全部留言</string>
+    <string name="detail_comment_one_content">是不是顺丰到付</string>
+    <string name="detail_comment_one_username">好好他爸爸</string>
+    <string name="detail_comment_three_content">白送吗</string>
+    <string name="detail_comment_three_username">为宝宝920</string>
+    <string name="detail_comment_two_content">配备充电器吗</string>
+    <string name="detail_comment_two_username">一盘米饭就够了</string>
+    <string name="detail_item_detail">详情</string>
+    <string name="detail_item_leave">留言</string>
+    <string name="detail_item_recommend">为你推荐</string>
+    <string name="detail_item_title_tip">发布于:</string>
+    <string name="detail_item_want">9999 浏览 | 9999人 想要</string>
+    <string name="float_button">添加商品</string>
+    <string name="home_card_text_bold_1">潮服潮鞋</string>
+    <string name="home_card_text_bold_2">潮玩盲盒</string>
+    <string name="home_card_text_bold_3">精品手机</string>
+    <string name="home_card_text_bold_4">咸鱼拍</string>
+    <string name="home_card_text_common_1">正品尖货</string>
+    <string name="home_card_text_common_2">爆款折扣</string>
+    <string name="home_card_text_common_3">品质担保</string>
+    <string name="home_card_text_common_4">一元起拍</string>
+    <string name="home_card_title">咸鱼优品</string>
+    <string name="home_card_title2">验货包真|全国包邮|品质包退</string>
+    <string name="home_shop_item_yuan">元</string>
+    <string name="login_account_hint">Phone Number</string>
+    <string name="login_button_login">Login</string>
+    <string name="login_button_register">Register</string>
+    <string name="login_failure">Login Failure</string>
+    <string name="login_forgot">Forget Password?</string>
+    <string name="login_login_button">If you have an account <b> Login here</b></string>
+    <string name="login_no_phone">PhoneNumber can`t be null</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_register_button">If you don`t have an account <b> Register here</b></string>
+    <string name="login_register_failure">Register Failure</string>
+    <string name="login_register_started">Register Started</string>
+    <string name="login_register_success">Register Success</string>
+    <string name="login_send">send</string>
+    <string name="login_started">Login Started</string>
+    <string name="login_success">Login Success</string>
+    <string name="login_verify">Please enter SMS</string>
+    <string name="login_verify_failure">Send Failure</string>
+    <string name="login_verify_success">Send Success</string>
+    <string name="login_welcome">Welcome Back</string>
+    <string name="login_welcome2">Sign in to continue</string>
+    <string name="nav_cart">Cart</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_message">Message</string>
+    <string name="nav_person">Person</string>
+    <string name="null_str">     </string>
+    <style name="BottomSheetDialogBg" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <style name="SearchView" parent="Widget.AppCompat.Light.SearchView">
+        <item name="editTextColor">@color/black</item>
+        <item name="android:textColorHint">@color/textGray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="tint">@color/black</item>
+        <item name="queryBackground">@drawable/search_bg</item>
+    </style>
+    <style name="TabStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="textAllCaps">false</item>
+    </style>
+    <style name="Theme.Fish" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        
+        <item name="colorPrimary">@color/main_color</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        
+        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+</resources>

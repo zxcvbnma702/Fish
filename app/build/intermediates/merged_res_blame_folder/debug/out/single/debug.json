@@ -1,0 +1,394 @@
+[
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_tab_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\tab_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_detail_user.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_right.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_tab_selected_indicator.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\tab_selected_indicator.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_down.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img3_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img3_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_home_1.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_1.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_login_phone.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\login_phone.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_picture_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_picture_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_button_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\button_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_append_type.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_append_type.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_detail_content.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_backup_rules.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\xml\\backup_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_add.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\nav_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-xhdpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-xhdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-anydpi-v24_home_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-anydpi-v24\\home_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_same.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_same.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-xxxhdpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-xxxhdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_cart.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\nav_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_cart.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_shape_yellow.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\shape_yellow.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\menu_nav_menu.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\menu\\nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_home_2.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_2.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_money.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_money.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img6_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img6_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img4_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img4_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_type_selector.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_type_selector.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img2_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img2_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_home.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\nav_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-mdpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-mdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_list.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_modinf_ok_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\modinf_ok_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_gallery.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_cloud.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\cloud.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_home_3.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_3.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_baseline_favorite_border_24.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_baseline_favorite_border_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-ldpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-ldpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_cart_save.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_cart_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_add.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_add.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_shape_white.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\shape_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_b.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\b.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_detail_recommend.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_recommend.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img8_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img8_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_home_4.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_4.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img5_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img5_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_message.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_detail_comment.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img1_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img1_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_initial_avatar_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\initial_avatar_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_activity_login_xml_login_root_layout_scene.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\xml\\activity_login_xml_login_root_layout_scene.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_overage_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\overage_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_more.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_more.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_login_unvisibility.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\login_unvisibility.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_edittext_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\edittext_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_append_image.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_append_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_gallery_photo.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_activity_detail.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_data_extraction_rules.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_setting_button_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\setting_button_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_home_shop.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_home_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-hdpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-hdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_icon2.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\icon2.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_search_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\search_bg.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_a.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\a.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_modify_personal_information.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\modify_personal_information.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_noraml.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_noraml.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_detail_title.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_login_lock.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\login_lock.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_person.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_message.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\nav_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_cart.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_login_verify.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\login_verify.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_modinf_nook_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\modinf_nook_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_person.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\nav_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable-xxhdpi_home_bg.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-pngs-32:\\drawable-xxhdpi\\home_bg.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img7_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img7_dd.png"
+    },
+    {
+        "merged": "com.example.fish.app-merged_res-37:/layout_fragment_person.xml.flat",
+        "source": "com.example.fish.app-main-39:/layout/fragment_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_icon.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\icon.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_integral_dd.png.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\integral_dd.png"
+    }
+]

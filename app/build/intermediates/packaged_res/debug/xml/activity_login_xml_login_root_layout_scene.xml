@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/end">
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/login_inputs"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@+id/login_imgView_cloudRight"
+            android:alpha="0"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="10dp"
+            android:visibility="invisible" />
+        <Constraint
+            android:id="@+id/login_imgView_cloudLeft"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:translationX="-140dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp" />
+        <Constraint
+            android:id="@+id/login_imgView_cloudRight"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:translationX="140dp"
+            motion:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="120dp" />
+        <Constraint
+            android:id="@+id/tv_forgotPassword"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="30dp"
+            motion:layout_constraintTop_toBottomOf="@id/login_inputs"
+            android:alpha="0"
+            android:layout_marginTop="20dp" />
+        <Constraint
+            android:id="@+id/tv_register"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="30dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            android:alpha="0" />
+        <Constraint
+            android:layout_height="130dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="130dp"
+            android:id="@+id/login_imgView_logo_rays" />
+        <Constraint
+            android:layout_height="130dp"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="130dp"
+            android:id="@+id/login_imgView_logo" />
+    </ConstraintSet>
+
+    <Transition
+        motion:constraintSetStart="@+id/start"
+        motion:constraintSetEnd="@+id/end"
+        motion:autoTransition="animateToEnd"
+        motion:duration="2000" >
+        <KeyFrameSet >
+            <KeyAttribute
+                motion:motionTarget="@+id/login_inputs"
+                motion:framePosition="66"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/tv_forgotPassword"
+                motion:framePosition="66"
+                android:alpha="0" />
+            <KeyAttribute
+                motion:motionTarget="@+id/tv_register"
+                motion:framePosition="66"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+</MotionScene>

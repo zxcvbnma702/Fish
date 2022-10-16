@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+                                                       
+                                                   
+
+    
+                 
+                            
+                                                            
+           
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/cart_swipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.home.HomeFragment" android:tag="layout/fragment_cart_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:fitsSystemWindows="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/black"
+                android:text="@string/cart_title"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+
+            <View
+                android:background="@color/lightGrey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/cart_recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+         

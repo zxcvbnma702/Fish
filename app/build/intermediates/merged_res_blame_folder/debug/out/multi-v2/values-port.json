@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.fish.app-mergeDebugResources-35:/values-port/values-port.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\l\\.gradle\\caches\\transforms-3\\ce36737ca23ca85cb64d24cf1eafd425\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "55",
+                        "endOffsets": "106"
+                    }
+                }
+            ]
+        }
+    ]
+}

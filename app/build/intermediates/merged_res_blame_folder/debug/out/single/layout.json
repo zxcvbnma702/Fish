@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\activity_login.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "com.example.fish.app-mergeDebugResources-36:/layout/fragment_person.xml",
+        "source": "com.example.fish.app-main-39:/layout/fragment_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_detail_recommend.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_recommend.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\fragment_bottom_sheet.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_bottom_sheet.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_detail_user.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\fragment_home.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_noraml.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_noraml.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_cart_save.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_cart_save.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_detail_content.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_content.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_detail_comment.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_comment.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_append_type.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_append_type.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\modify_personal_information.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\modify_personal_information.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\fragment_message.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_home_shop.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_home_shop.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\fragment_person.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_append_image.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_append_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\activity_detail.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\fragment_cart.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_cart.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_gallery_photo.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery_photo.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_gallery.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-mergeDebugResources-36:\\layout\\item_detail_title.xml",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_title.xml"
+    }
+]
