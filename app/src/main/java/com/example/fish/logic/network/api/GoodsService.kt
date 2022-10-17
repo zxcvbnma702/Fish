@@ -42,11 +42,18 @@ interface GoodsService {
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @POST("goods/delete")
-    fun deleteGoodInformation(@Query("goodsId")goodsId: Int, @Query("userId")userId: Int): Call<SaveResponse>
+    fun deleteGoodInformation(
+        @Query("goodsId") goodsId: Int,
+        @Query("userId") userId: Int
+    ): Call<SaveResponse>
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @GET("goods/save")
     fun getSaveGoodInformation(@Query("userId") userId: Int): Call<SaveListResponse>
+
+    @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
+    @GET("goods/myself")
+    fun getPostGoodInformation(@Query("userId") userId: Int): Call<SaveListResponse>
 
     @Headers("appId: ${FishApplication.appId}", "appSecret: ${FishApplication.appSecret}")
     @GET("goods/details")

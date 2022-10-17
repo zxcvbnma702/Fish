@@ -65,25 +65,39 @@ object Repository{
      * Goods
      */
 
-    fun getGoodTypes() = fire(Dispatchers.IO){
+    fun getGoodTypes() = fire(Dispatchers.IO) {
         val types = FishNetwork.getGoodTypes()
         run {
             Result.success(types.data)
         }
     }
 
-    fun getTypeGoods(userId: Int, typeId: Int, size: Int) = fire(Dispatchers.IO){
+    fun getTypeGoods(userId: Int, typeId: Int, size: Int) = fire(Dispatchers.IO) {
         val list = FishNetwork.getTypeGoods(userId, typeId, size)
-        run{
+        run {
             Result.success(list.data)
         }
     }
 
-    fun saveGoodInformation(address: String, content: String, imageCode: String, price: String, typeId: String, typeName: String, userId: String)
-        = fire(Dispatchers.IO){
-            val request = mapOf(
-                "addr"      to address,
-                "content"   to content,
+    fun getSearchGoods(userId: Int, keyword: String, size: Int) = fire(Dispatchers.IO) {
+        val list = FishNetwork.getTypeGoods(userId, keyword, size)
+        run {
+            Result.success(list.data)
+        }
+    }
+
+    fun saveGoodInformation(
+        address: String,
+        content: String,
+        imageCode: String,
+        price: String,
+        typeId: String,
+        typeName: String,
+        userId: String
+    ) = fire(Dispatchers.IO) {
+        val request = mapOf(
+            "addr" to address,
+            "content" to content,
                 "imageCode" to imageCode,
                 "price"     to price,
                 "typeId"    to typeId,
@@ -142,12 +156,19 @@ object Repository{
     fun deleteGoodInformation(id: Int, userId: Int) = fire(Dispatchers.IO){
         val response = FishNetwork.deleteGoodInformation(id, userId)
         run{
-            Result.success(response.data)
+            Result.success(response.msg)
         }
     }
 
     fun getSaveListInformation(userId: Int) = fire(Dispatchers.IO) {
         val response = FishNetwork.getSaveGoodInformation(userId)
+        run {
+            Result.success(response.data.records)
+        }
+    }
+
+    fun getPostListInformation(userId: Int) = fire(Dispatchers.IO) {
+        val response = FishNetwork.getPostGoodInformation(userId)
         run {
             Result.success(response.data.records)
         }

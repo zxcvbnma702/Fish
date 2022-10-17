@@ -27,8 +27,8 @@ class AppendViewModel: ViewModel() {
     var address: String ?= null
     var price: String ?= null
     var typeId: String ?= null
-    var typeName: String ?= null
-    var imageCode: String = "0"
+    var typeName: String? = null
+    var imageCode: String? = null
 
     var currentType = false
 
@@ -39,10 +39,14 @@ class AppendViewModel: ViewModel() {
     fun send(view: View){
         if(checkNull()) {
             uploadFile()
+            if (imageCode == null) {
+                FishApplication.context.toast("图片上传中...")
+                return
+            }
             val response = Repository.postGoodInformation(
                 address!!,
                 title!! + "\n" + content!!,
-                imageCode,
+                imageCode!!,
                 price!!,
                 typeId!!,
                 typeName!!,
@@ -57,10 +61,14 @@ class AppendViewModel: ViewModel() {
     fun save(view: View){
         if(checkNull()) {
             uploadFile()
+            if (imageCode == null) {
+                FishApplication.context.toast("图片上传中...")
+                return
+            }
             val response = Repository.saveGoodInformation(
                 address!!,
                 title!! + "\n" + content!!,
-                imageCode,
+                imageCode!!,
                 price!!,
                 typeId!!,
                 typeName!!,
@@ -81,7 +89,7 @@ class AppendViewModel: ViewModel() {
         return !(title == null || content == null || address == null || price == null || typeId == null || typeName == null)
     }
 
-    fun uploadFile() {
+    private fun uploadFile() {
         val partList = createList()
         val response = Repository.uploadMoreFiles(partList)
         appendListener?.onUploadComplete(response)

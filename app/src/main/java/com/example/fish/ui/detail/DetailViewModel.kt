@@ -36,7 +36,7 @@ class DetailViewModel : ViewModel() {
     }
 
     internal fun getItemList(data: DetailsData?): List<Item> = mutableListOf(
-        Item(DetailAdapter.GALLERY),
+        Item(DetailAdapter.GALLERY, Color.TRANSPARENT, "gallery", 100f, data),
         Item(DetailAdapter.TITLE, Color.BLUE, "title", 100f, data),
         Item(DetailAdapter.CONTENT, Color.YELLOW, "content", 200f, data),
         Item(DetailAdapter.USER, Color.WHITE, "user", 100f, data),

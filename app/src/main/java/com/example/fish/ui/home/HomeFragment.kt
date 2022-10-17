@@ -1,6 +1,10 @@
 package com.example.fish.ui.home
 
+import android.animation.AnimatorSet
+import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.util.Log
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -19,6 +23,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
     SwipeRefreshLayout.OnRefreshListener {
 
     private lateinit var myAdapter: HomeRecyclerAdapter
+    private lateinit var myAdapter2: HomeRecyclerAdapter
     private val mViewModel: HomeViewModel by lazy {
         ViewModelProvider(
             this,
@@ -33,6 +38,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
         mViewModel.getGoodTypes()
 
         myAdapter = HomeRecyclerAdapter(this@HomeFragment)
+        myAdapter2 = HomeRecyclerAdapter(this@HomeFragment)
 
         homeRecyclerView.adapter = myAdapter
 
@@ -59,6 +65,35 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
             )
             setOnRefreshListener(this@HomeFragment)
         }
+
+        homeSearchView.apply {
+            setOnSearchClickListener {
+                hideSearchView(true)
+            }
+            setOnCloseListener {
+                mViewModel.getTypeGoods()
+                hideSearchView(false)
+                false
+            }
+        }
+
+        homeSearchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean = true
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                var queryText = ""
+
+                if (newText != null) {
+                    queryText += newText
+                    mViewModel.apply {
+                        searchText = queryText
+                        getSearchGoods()
+                    }
+                }
+                Log.e("search", mViewModel.searchText)
+                return false
+            }
+        })
     }
 
     /**
@@ -85,15 +120,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
      * */
     @SuppressLint("NotifyDataSetChanged")
     override fun onTypeGoods(data: LiveData<Result<AllData>>) {
-       data.observe(this@HomeFragment) { result ->
-           val goodResponse = result.getOrNull()
-           if (goodResponse != null && goodResponse.total != 0) {
-               myAdapter.setData(goodResponse.records)
-           } else {
-               myAdapter.setData(mViewModel.goodList)
-               binding.homeRecyclerView.adapter?.notifyDataSetChanged()
-           }
-       }
+        data.observe(this@HomeFragment) { result ->
+            val goodResponse = result.getOrNull()
+            if (goodResponse != null && goodResponse.total != 0) {
+                myAdapter.setData(goodResponse.records)
+            } else {
+                myAdapter.setData(mViewModel.goodList)
+                binding.homeRecyclerView.adapter?.notifyDataSetChanged()
+            }
+        }
+    }
+
+    override fun onSearchGoods(data: LiveData<Result<AllData>>?) {
+        data?.observe(this@HomeFragment) { result ->
+            val searchResponse = result.getOrNull()
+            if (searchResponse != null) {
+                myAdapter2.setData(searchResponse.records)
+            }
+        }
     }
 
     internal fun jumpTo(item: Record) {
@@ -108,9 +152,45 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
         mViewModel.getTypeGoods()
         val job = Job()
         CoroutineScope(job).launch {
-            withContext(Dispatchers.Main){
+            withContext(Dispatchers.Main) {
                 delay(3000)
                 binding.homeSwipe.isRefreshing = false
+            }
+        }
+    }
+
+    /**
+     * Control view`s visibility
+     */
+    private fun hideSearchView(isHide: Boolean) {
+        if (isHide) {
+            binding.apply {
+                val animRecycler =
+                    ObjectAnimator.ofFloat(homeRecyclerView, "translationY", 0f, -700f)
+                val animTabLayout = ObjectAnimator.ofFloat(homeCardView, "alpha", 1.0f, 0f)
+                val animCardView = ObjectAnimator.ofFloat(homeTablayout, "alpha", 1.0f, 0f)
+
+                val animSet = AnimatorSet()
+                animSet.apply {
+                    playTogether(animRecycler, animCardView, animTabLayout)
+                    duration = 500
+                    start()
+                }
+                homeRecyclerView.adapter = myAdapter2
+            }
+        } else {
+            binding.apply {
+                val animRecycler = ObjectAnimator.ofFloat(homeRecyclerView, "translationY", 0f)
+                val animTabLayout = ObjectAnimator.ofFloat(homeCardView, "alpha", 0f, 1f)
+                val animCardView = ObjectAnimator.ofFloat(homeTablayout, "alpha", 0f, 1f)
+
+                val animSet = AnimatorSet()
+                animSet.apply {
+                    playTogether(animRecycler, animCardView, animTabLayout)
+                    duration = 500
+                    start()
+                }
+                homeRecyclerView.adapter = myAdapter
             }
         }
     }
