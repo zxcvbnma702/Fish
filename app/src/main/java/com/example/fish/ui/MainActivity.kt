@@ -10,6 +10,7 @@ import com.example.fish.ui.append.BottomSheetFragment
 import com.example.fish.ui.cart.CartFragment
 import com.example.fish.ui.home.HomeFragment
 import com.example.fish.ui.message.MessageFragment
+import com.example.fish.ui.person.PersonFragment
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -22,7 +23,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
         home = HomeFragment()
         message = MessageFragment()
         cart = CartFragment()
-        person = PesonFragment()
+        person = PersonFragment()
     }
 
     override fun ActivityMainBinding.initBindingView() {

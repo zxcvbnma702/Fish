@@ -4,6 +4,7 @@ package com.example.fish.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -18,7 +19,13 @@ import java.lang.Object;
 
 public abstract class FragmentCartBinding extends ViewDataBinding {
   @NonNull
+  public final TextView cartPosted;
+
+  @NonNull
   public final RecyclerView cartRecyclerView;
+
+  @NonNull
+  public final TextView cartSaved;
 
   @NonNull
   public final SwipeRefreshLayout cartSwipe;
@@ -27,9 +34,12 @@ public abstract class FragmentCartBinding extends ViewDataBinding {
   protected CartViewModel mViewModel;
 
   protected FragmentCartBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView cartRecyclerView, SwipeRefreshLayout cartSwipe) {
+      TextView cartPosted, RecyclerView cartRecyclerView, TextView cartSaved,
+      SwipeRefreshLayout cartSwipe) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.cartPosted = cartPosted;
     this.cartRecyclerView = cartRecyclerView;
+    this.cartSaved = cartSaved;
     this.cartSwipe = cartSwipe;
   }
 

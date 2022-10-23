@@ -4,8 +4,10 @@ package com.example.fish.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
 import androidx.databinding.Bindable;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
@@ -18,7 +20,16 @@ import java.lang.Object;
 
 public abstract class ActivityDetailBinding extends ViewDataBinding {
   @NonNull
+  public final TextView detailBuy;
+
+  @NonNull
+  public final TextView detailSame;
+
+  @NonNull
   public final RecyclerView itemList;
+
+  @NonNull
+  public final LinearLayoutCompat linearLayout;
 
   @NonNull
   public final TabLayout tabLayout;
@@ -27,9 +38,13 @@ public abstract class ActivityDetailBinding extends ViewDataBinding {
   protected DetailViewModel mViewModel;
 
   protected ActivityDetailBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RecyclerView itemList, TabLayout tabLayout) {
+      TextView detailBuy, TextView detailSame, RecyclerView itemList,
+      LinearLayoutCompat linearLayout, TabLayout tabLayout) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.detailBuy = detailBuy;
+    this.detailSame = detailSame;
     this.itemList = itemList;
+    this.linearLayout = linearLayout;
     this.tabLayout = tabLayout;
   }
 

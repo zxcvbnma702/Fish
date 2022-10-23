@@ -45,6 +45,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Fish" >
         <activity
+            android:name="com.example.fish.ui.person.SettingActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.fish.ui.detail.DetailActivity"
             android:exported="false" />
         <activity

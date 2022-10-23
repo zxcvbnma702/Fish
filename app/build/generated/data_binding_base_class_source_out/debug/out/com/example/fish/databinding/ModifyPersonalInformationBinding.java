@@ -4,6 +4,7 @@ package com.example.fish.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,14 +22,39 @@ public abstract class ModifyPersonalInformationBinding extends ViewDataBinding {
   public final ImageView editInformationOk;
 
   @NonNull
+  public final EditText editText;
+
+  @NonNull
+  public final EditText editText3;
+
+  @NonNull
+  public final EditText editText4;
+
+  @NonNull
+  public final EditText editText5;
+
+  @NonNull
+  public final EditText editText6;
+
+  @NonNull
+  public final EditText editText7;
+
+  @NonNull
   public final ImageView headPortraitSettings;
 
   protected ModifyPersonalInformationBinding(Object _bindingComponent, View _root,
       int _localFieldCount, ImageView editInformationNoOk, ImageView editInformationOk,
-      ImageView headPortraitSettings) {
+      EditText editText, EditText editText3, EditText editText4, EditText editText5,
+      EditText editText6, EditText editText7, ImageView headPortraitSettings) {
     super(_bindingComponent, _root, _localFieldCount);
     this.editInformationNoOk = editInformationNoOk;
     this.editInformationOk = editInformationOk;
+    this.editText = editText;
+    this.editText3 = editText3;
+    this.editText4 = editText4;
+    this.editText5 = editText5;
+    this.editText6 = editText6;
+    this.editText7 = editText7;
     this.headPortraitSettings = headPortraitSettings;
   }
 

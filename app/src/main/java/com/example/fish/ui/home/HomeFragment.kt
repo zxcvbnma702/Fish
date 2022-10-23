@@ -174,9 +174,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
                 animSet.apply {
                     playTogether(animRecycler, animCardView, animTabLayout)
                     duration = 500
+                    homeRecyclerView.adapter = myAdapter2
                     start()
                 }
-                homeRecyclerView.adapter = myAdapter2
+
             }
         } else {
             binding.apply {
@@ -188,9 +189,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeListener,
                 animSet.apply {
                     playTogether(animRecycler, animCardView, animTabLayout)
                     duration = 500
+                    homeRecyclerView.adapter = myAdapter
                     start()
                 }
-                homeRecyclerView.adapter = myAdapter
             }
         }
     }

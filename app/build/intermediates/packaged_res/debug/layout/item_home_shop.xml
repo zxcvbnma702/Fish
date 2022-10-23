@@ -9,7 +9,7 @@
 
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/item_shop_card"
-            android:layout_width="343dp"
+            android:layout_width="wrap_content"
             android:layout_height="140dp"
             android:background="#ffffffff"
             android:clickable="true"
@@ -79,7 +79,7 @@
                 android:id="@+id/item_shop_avator"
                 android:layout_width="28dp"
                 android:layout_height="28dp"
-                android:layout_marginStart="300dp"
+                android:layout_marginStart="280dp"
                 android:layout_marginTop="96dp"
                 android:src="@drawable/ic_cart"
                 app:civ_border_color="@android:color/transparent"

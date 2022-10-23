@@ -8,6 +8,10 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_detail_user.xml"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_smile_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_smile_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_right.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_right.xml"
     },
@@ -20,12 +24,12 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-mdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_bottom_sheet.xml.flat",
-        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_bottom_sheet.xml"
-    },
-    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_down.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_bottom_sheet.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_bottom_sheet.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_network_security_config.xml.flat",
@@ -36,8 +40,16 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img3_dd.png"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_anchor_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_anchor_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_home_1.png.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_1.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_identity.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_identity.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_login_phone.xml.flat",
@@ -98,6 +110,10 @@
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_smile.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_smile.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_nav_cart.xml.flat",
@@ -172,6 +188,14 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\modinf_ok_dd.png"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_detail_item_title.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\detail_item_title.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_thumb_up.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_thumb_up.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_item_gallery.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery.xml"
     },
@@ -188,6 +212,10 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_home_3.png"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_bell_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_bell_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_ic_baseline_favorite_border_24.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\ic_baseline_favorite_border_24.xml"
     },
@@ -200,12 +228,24 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_cart_save.xml"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_identity_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_identity_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_append_add.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\append_add.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_shape_white.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\shape_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_detail_same_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\detail_same_bg.xml"
+    },
+    {
+        "merged": "com.example.fish.app-merged_res-37:/layout_modify_personal_information.xml.flat",
+        "source": "com.example.fish.app-main-39:/layout/modify_personal_information.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_b.png.flat",
@@ -232,6 +272,10 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img5_dd.png"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_offer_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_offer_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_fragment_message.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\fragment_message.xml"
     },
@@ -252,12 +296,20 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\initial_avatar_dd.png"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_detail_buy_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\detail_buy_bg.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_activity_login_xml_login_root_layout_scene.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\xml\\activity_login_xml_login_root_layout_scene.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_overage_dd.png.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\overage_dd.png"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_thumb_up_bg.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_thumb_up_bg.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
@@ -284,8 +336,16 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\item_gallery_photo.xml"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_bell.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_bell.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\layout_activity_detail.xml.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\layout\\activity_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_offer.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_offer.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\xml_data_extraction_rules.xml.flat",
@@ -360,6 +420,10 @@
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\login_verify.xml"
     },
     {
+        "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_message_anchor.xml.flat",
+        "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\message_anchor.xml"
+    },
+    {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_modinf_nook_dd.png.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\modinf_nook_dd.png"
     },
@@ -378,10 +442,6 @@
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_person_img7_dd.png.flat",
         "source": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-main-39:\\drawable\\person_img7_dd.png"
-    },
-    {
-        "merged": "com.example.fish.app-merged_res-37:/layout_fragment_person.xml.flat",
-        "source": "com.example.fish.app-main-39:/layout/fragment_person.xml"
     },
     {
         "merged": "C:\\Users\\l\\.gradle\\daemon\\7.3.3\\com.example.fish.app-merged_res-37:\\drawable_icon.png.flat",

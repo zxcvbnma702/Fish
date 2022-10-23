@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:ns1="http://schemas.android.com/tools">
+<resources>
     <color name="black">#FF000000</color>
     <color name="colo_bac">#f8f8f8</color>
     <color name="colo_blue">#2196F3</color>
@@ -10,6 +10,11 @@
     <color name="color_link">#f0f0f0</color>
     <color name="lightGrey">#EAEAEA</color>
     <color name="main_color">#FFEE52</color>
+    <color name="message_anchor">#FFEE52</color>
+    <color name="message_identity">#A8F3FF</color>
+    <color name="message_offer">#67E0A2</color>
+    <color name="message_smile">#FFEB3B</color>
+    <color name="message_thumb_up">#FF5733</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -42,6 +47,8 @@
     <string name="append_title">发布</string>
     <string name="append_title_hint">标题</string>
     <string name="append_toast">请将商品信息填写完整</string>
+    <string name="cart_delete_failure">删除失败</string>
+    <string name="cart_delete_success">删除成功</string>
     <string name="cart_item_send">发布</string>
     <string name="cart_refresh">刷新完成</string>
     <string name="cart_send_failure">发送失败</string>
@@ -49,8 +56,11 @@
     <string name="cart_shop_item_text">没人想要</string>
     <string name="cart_shop_item_yuan">¥</string>
     <string name="cart_title">待发布</string>
+    <string name="cart_title2">已发布</string>
     <string name="detail_add">关注</string>
     <string name="detail_all_comment">点击查看全部留言</string>
+    <string name="detail_buy">我想要</string>
+    <string name="detail_buy_text">这个接口有问题,别买了…</string>
     <string name="detail_comment_one_content">是不是顺丰到付</string>
     <string name="detail_comment_one_username">好好他爸爸</string>
     <string name="detail_comment_three_content">白送吗</string>
@@ -62,6 +72,8 @@
     <string name="detail_item_recommend">为你推荐</string>
     <string name="detail_item_title_tip">发布于:</string>
     <string name="detail_item_want">9999 浏览 | 9999人 想要</string>
+    <string name="detail_same">卖同款</string>
+    <string name="detail_same_text">没有这个接口,别卖了…</string>
     <string name="float_button">添加商品</string>
     <string name="home_card_text_bold_1">潮服潮鞋</string>
     <string name="home_card_text_bold_2">潮玩盲盒</string>
@@ -94,11 +106,26 @@
     <string name="login_verify_success">Send Success</string>
     <string name="login_welcome">Welcome Back</string>
     <string name="login_welcome2">Sign in to continue</string>
+    <string name="message_info">消息</string>
+    <string name="message_string_anchor_down">新人安心购领取</string>
+    <string name="message_string_anchor_up">闲小蜜</string>
+    <string name="message_string_bell_down">还没有新通知~</string>
+    <string name="message_string_bell_up">通知信息</string>
+    <string name="message_string_identity_down">【4条】换钱、腾空间两不误！</string>
+    <string name="message_string_identity_up">买家小助手</string>
+    <string name="message_string_offer_down">【11条】您感兴趣的erd类商品…</string>
+    <string name="message_string_offer_up">闲鱼情报社</string>
+    <string name="message_string_smile_down">“小猫咪~”</string>
+    <string name="message_string_smile_up">会玩精选</string>
+    <string name="message_string_thumb_up_down">还没有互动信息~</string>
+    <string name="message_string_thumb_up_up">互动信息</string>
     <string name="nav_cart">Cart</string>
     <string name="nav_home">Home</string>
     <string name="nav_message">Message</string>
     <string name="nav_person">Person</string>
     <string name="null_str">     </string>
+    <string name="person_default">dd</string>
+    <string name="person_title">个人中心</string>
     <style name="BottomSheetDialogBg" parent="Theme.Design.Light.BottomSheetDialog">
         <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
         <item name="android:backgroundDimEnabled">false</item>
@@ -115,7 +142,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="textAllCaps">false</item>
     </style>
-    <style name="Theme.Fish" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.Fish" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
         
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
@@ -128,7 +155,7 @@
         <item name="windowNoTitle">true</item>
         <item name="android:windowTranslucentStatus">true</item>
         
-        <item name="android:statusBarColor" ns1:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
         
     </style>
     <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">

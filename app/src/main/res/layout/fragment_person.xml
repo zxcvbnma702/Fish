@@ -12,8 +12,8 @@
 
         <TextView
             android:id="@+id/textView"
-            android:layout_width="81dp"
-            android:layout_height="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:layout_gravity="center"
             android:text="@string/person_title"
@@ -23,8 +23,7 @@
             app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
             android:id="@+id/linearLayout8"
@@ -213,7 +212,7 @@
                     android:layout_marginTop="15dp"
                     android:text="我发布的"
                     android:textColor="@color/black"
-                    android:textSize="16sp">
+                    android:textSize="15sp">
 
                 </TextView>
 
@@ -246,7 +245,7 @@
                     android:layout_marginTop="15dp"
                     android:text="我发布的"
                     android:textColor="@color/black"
-                    android:textSize="16sp">
+                    android:textSize="15sp">
 
                 </TextView>
             </LinearLayout>
@@ -274,7 +273,7 @@
                     android:layout_marginTop="15dp"
                     android:text="我买到的"
                     android:textColor="@color/black"
-                    android:textSize="16sp">
+                    android:textSize="15sp">
 
                 </TextView>
             </LinearLayout>
@@ -297,11 +296,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
                     android:text="我可转卖的"
                     android:textColor="@color/black"
-                    android:textSize="16sp"></TextView>
+                    android:textSize="15sp"/>
             </LinearLayout>
         </LinearLayout>
 

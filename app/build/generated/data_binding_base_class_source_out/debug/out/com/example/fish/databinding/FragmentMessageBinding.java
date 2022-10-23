@@ -4,8 +4,12 @@ package com.example.fish.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.LinearLayoutCompat;
+import androidx.appcompat.widget.SearchView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.fish.R;
@@ -13,8 +17,122 @@ import java.lang.Deprecated;
 import java.lang.Object;
 
 public abstract class FragmentMessageBinding extends ViewDataBinding {
-  protected FragmentMessageBinding(Object _bindingComponent, View _root, int _localFieldCount) {
+  @NonNull
+  public final ImageView messageAnchor;
+
+  @NonNull
+  public final ImageView messageBell;
+
+  @NonNull
+  public final ImageView messageIdentity;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineAnchor;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineBell;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineIdentity;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineOffer;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineSmile;
+
+  @NonNull
+  public final LinearLayoutCompat messageLineThumbUp;
+
+  @NonNull
+  public final ImageView messageOffer;
+
+  @NonNull
+  public final SearchView messageSearchView;
+
+  @NonNull
+  public final ImageView messageSmlie;
+
+  @NonNull
+  public final TextView messageTextAnchorDown;
+
+  @NonNull
+  public final TextView messageTextAnchorUp;
+
+  @NonNull
+  public final TextView messageTextBellDown;
+
+  @NonNull
+  public final TextView messageTextBellUp;
+
+  @NonNull
+  public final TextView messageTextIdentityDown;
+
+  @NonNull
+  public final TextView messageTextIdentityUp;
+
+  @NonNull
+  public final TextView messageTextInfo;
+
+  @NonNull
+  public final TextView messageTextOfferDown;
+
+  @NonNull
+  public final TextView messageTextOfferUp;
+
+  @NonNull
+  public final TextView messageTextSmileDown;
+
+  @NonNull
+  public final TextView messageTextSmileUp;
+
+  @NonNull
+  public final TextView messageTextThumbUpDown;
+
+  @NonNull
+  public final TextView messageTextThumbUpUp;
+
+  @NonNull
+  public final ImageView messageThumbUp;
+
+  protected FragmentMessageBinding(Object _bindingComponent, View _root, int _localFieldCount,
+      ImageView messageAnchor, ImageView messageBell, ImageView messageIdentity,
+      LinearLayoutCompat messageLineAnchor, LinearLayoutCompat messageLineBell,
+      LinearLayoutCompat messageLineIdentity, LinearLayoutCompat messageLineOffer,
+      LinearLayoutCompat messageLineSmile, LinearLayoutCompat messageLineThumbUp,
+      ImageView messageOffer, SearchView messageSearchView, ImageView messageSmlie,
+      TextView messageTextAnchorDown, TextView messageTextAnchorUp, TextView messageTextBellDown,
+      TextView messageTextBellUp, TextView messageTextIdentityDown, TextView messageTextIdentityUp,
+      TextView messageTextInfo, TextView messageTextOfferDown, TextView messageTextOfferUp,
+      TextView messageTextSmileDown, TextView messageTextSmileUp, TextView messageTextThumbUpDown,
+      TextView messageTextThumbUpUp, ImageView messageThumbUp) {
     super(_bindingComponent, _root, _localFieldCount);
+    this.messageAnchor = messageAnchor;
+    this.messageBell = messageBell;
+    this.messageIdentity = messageIdentity;
+    this.messageLineAnchor = messageLineAnchor;
+    this.messageLineBell = messageLineBell;
+    this.messageLineIdentity = messageLineIdentity;
+    this.messageLineOffer = messageLineOffer;
+    this.messageLineSmile = messageLineSmile;
+    this.messageLineThumbUp = messageLineThumbUp;
+    this.messageOffer = messageOffer;
+    this.messageSearchView = messageSearchView;
+    this.messageSmlie = messageSmlie;
+    this.messageTextAnchorDown = messageTextAnchorDown;
+    this.messageTextAnchorUp = messageTextAnchorUp;
+    this.messageTextBellDown = messageTextBellDown;
+    this.messageTextBellUp = messageTextBellUp;
+    this.messageTextIdentityDown = messageTextIdentityDown;
+    this.messageTextIdentityUp = messageTextIdentityUp;
+    this.messageTextInfo = messageTextInfo;
+    this.messageTextOfferDown = messageTextOfferDown;
+    this.messageTextOfferUp = messageTextOfferUp;
+    this.messageTextSmileDown = messageTextSmileDown;
+    this.messageTextSmileUp = messageTextSmileUp;
+    this.messageTextThumbUpDown = messageTextThumbUpDown;
+    this.messageTextThumbUpUp = messageTextThumbUpUp;
+    this.messageThumbUp = messageThumbUp;
   }
 
   @NonNull

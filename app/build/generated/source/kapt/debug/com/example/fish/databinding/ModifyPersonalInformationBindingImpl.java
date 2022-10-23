@@ -17,6 +17,12 @@ public class ModifyPersonalInformationBindingImpl extends ModifyPersonalInformat
         sViewsWithIds.put(R.id.edit_information_no_ok, 1);
         sViewsWithIds.put(R.id.edit_information_ok, 2);
         sViewsWithIds.put(R.id.head_portrait_settings, 3);
+        sViewsWithIds.put(R.id.editText, 4);
+        sViewsWithIds.put(R.id.editText3, 5);
+        sViewsWithIds.put(R.id.editText4, 6);
+        sViewsWithIds.put(R.id.editText5, 7);
+        sViewsWithIds.put(R.id.editText6, 8);
+        sViewsWithIds.put(R.id.editText7, 9);
     }
     // views
     @NonNull
@@ -27,12 +33,18 @@ public class ModifyPersonalInformationBindingImpl extends ModifyPersonalInformat
     // Inverse Binding Event Handlers
 
     public ModifyPersonalInformationBindingImpl(@Nullable androidx.databinding.DataBindingComponent bindingComponent, @NonNull View root) {
-        this(bindingComponent, root, mapBindings(bindingComponent, root, 4, sIncludes, sViewsWithIds));
+        this(bindingComponent, root, mapBindings(bindingComponent, root, 10, sIncludes, sViewsWithIds));
     }
     private ModifyPersonalInformationBindingImpl(androidx.databinding.DataBindingComponent bindingComponent, View root, Object[] bindings) {
         super(bindingComponent, root, 0
             , (android.widget.ImageView) bindings[1]
             , (android.widget.ImageView) bindings[2]
+            , (android.widget.EditText) bindings[4]
+            , (android.widget.EditText) bindings[5]
+            , (android.widget.EditText) bindings[6]
+            , (android.widget.EditText) bindings[7]
+            , (android.widget.EditText) bindings[8]
+            , (android.widget.EditText) bindings[9]
             , (android.widget.ImageView) bindings[3]
             );
         this.mboundView0 = (androidx.appcompat.widget.LinearLayoutCompat) bindings[0];
