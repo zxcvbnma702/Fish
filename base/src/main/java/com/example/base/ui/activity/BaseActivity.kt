@@ -52,7 +52,6 @@ abstract class BaseActivity<VB : ViewDataBinding> : AppCompatActivity(), BaseBin
                 Manifest.permission.WRITE_EXTERNAL_STORAGE,
                 Manifest.permission.READ_EXTERNAL_STORAGE,
                 Manifest.permission.RECORD_AUDIO,
-                Manifest.permission.MANAGE_EXTERNAL_STORAGE,
                 Manifest.permission.BLUETOOTH,
                 Manifest.permission.FOREGROUND_SERVICE,
                 Manifest.permission.ACCESS_COARSE_LOCATION,

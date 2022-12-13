@@ -4,10 +4,10 @@ package com.example.fish.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.AppCompatImageView;
 import androidx.databinding.DataBindingUtil;
 import androidx.databinding.ViewDataBinding;
 import com.example.fish.R;
@@ -27,7 +27,7 @@ public abstract class ItemHomeShopBinding extends ViewDataBinding {
   public final TextView itemShopContent;
 
   @NonNull
-  public final ImageView itemShopImage;
+  public final AppCompatImageView itemShopImage;
 
   @NonNull
   public final TextView itemShopPrice;
@@ -37,7 +37,7 @@ public abstract class ItemHomeShopBinding extends ViewDataBinding {
 
   protected ItemHomeShopBinding(Object _bindingComponent, View _root, int _localFieldCount,
       CircleImageView itemShopAvator, MaterialCardView itemShopCard, TextView itemShopContent,
-      ImageView itemShopImage, TextView itemShopPrice, TextView itemShopTitle) {
+      AppCompatImageView itemShopImage, TextView itemShopPrice, TextView itemShopTitle) {
     super(_bindingComponent, _root, _localFieldCount);
     this.itemShopAvator = itemShopAvator;
     this.itemShopCard = itemShopCard;

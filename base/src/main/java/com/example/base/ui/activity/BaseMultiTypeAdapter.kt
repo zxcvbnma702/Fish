@@ -2,9 +2,11 @@ package com.example.base.ui.activity
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.R
 import java.util.*
 
 /**
@@ -97,6 +99,14 @@ abstract class BaseMultiTypeAdapter<T> :
     override fun onBindViewHolder(holder: MultiTypeViewHolder, position: Int) {
         holder.onBindViewHolder(holder, getItem(position), position)
         holder.binding.executePendingBindings()
+    }
+
+    override fun onViewAttachedToWindow(holder: MultiTypeViewHolder) {
+        super.onViewAttachedToWindow(holder)
+        holder.itemView.apply {
+            clearAnimation()
+            startAnimation(AnimationUtils.loadAnimation(context, R.anim.scale_in_scroll))
+        }
     }
 
     abstract fun MultiTypeViewHolder.onBindViewHolder(

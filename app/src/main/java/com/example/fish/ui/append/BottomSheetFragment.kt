@@ -180,6 +180,7 @@ class BottomSheetFragment : BottomSheetDialogFragment(), AppendListener {
         }
     }
 
+    //初始化bottomSheet状态
     private fun initBottomSheet() {
         val view: View = dialog?.findViewById(R.id.design_bottom_sheet)!!
         view.layoutParams.height = ViewGroup.LayoutParams.MATCH_PARENT

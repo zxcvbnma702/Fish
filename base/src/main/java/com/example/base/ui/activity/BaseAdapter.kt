@@ -2,9 +2,11 @@ package com.example.base.ui.activity
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import com.example.base.R
 import com.example.base.ui.kxt.getViewBinding
 import java.util.*
 
@@ -103,6 +105,14 @@ abstract class BaseAdapter<T, VB : ViewDataBinding> :
         return with(getViewBinding<VB>(LayoutInflater.from(parent.context), parent, 1)) {
             setListener()
             BindViewHolder(this)
+        }
+    }
+
+    override fun onViewAttachedToWindow(holder: BindViewHolder<VB>) {
+        super.onViewAttachedToWindow(holder)
+        holder.itemView.apply {
+            clearAnimation()
+            startAnimation(AnimationUtils.loadAnimation(context, R.anim.scale_in_scroll))
         }
     }
 

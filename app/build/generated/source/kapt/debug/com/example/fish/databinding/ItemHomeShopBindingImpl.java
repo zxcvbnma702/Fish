@@ -37,7 +37,7 @@ public class ItemHomeShopBindingImpl extends ItemHomeShopBinding  {
             , (de.hdodenhof.circleimageview.CircleImageView) bindings[6]
             , (com.google.android.material.card.MaterialCardView) bindings[1]
             , (android.widget.TextView) bindings[4]
-            , (android.widget.ImageView) bindings[2]
+            , (androidx.appcompat.widget.AppCompatImageView) bindings[2]
             , (android.widget.TextView) bindings[5]
             , (android.widget.TextView) bindings[3]
             );

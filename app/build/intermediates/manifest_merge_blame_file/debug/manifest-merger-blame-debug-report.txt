@@ -6,202 +6,199 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="21"
-8-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml
+8-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="31" />
-9-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml
+9-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml
 10
 11    <queries package="com.example.fish" >
-11-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:6:14-40
+11-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:6:14-40
 12        <intent>
-12-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:7:9-9:18
+12-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:7:9-9:18
 13            <action android:name="android.media.action.IMAGE_CAPTURE" />
-13-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:8:13-73
-13-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:8:21-70
+13-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:8:13-73
+13-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:8:21-70
 14        </intent>
 15        <intent>
-15-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:10:9-12:18
+15-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:10:9-12:18
 16            <action android:name="android.media.action.ACTION_VIDEO_CAPTURE" />
-16-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:11:13-80
-16-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:11:21-77
+16-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:11:13-80
+16-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:11:21-77
 17        </intent>
 18    </queries>
 19
 20    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-20-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-81
-20-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-78
+20-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:5-81
+20-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:10:22-78
 21    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-21-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
-21-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
+21-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:5-79
+21-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:11:22-76
 22    <uses-permission android:name="android.permission.INTERNET" />
-22-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
-22-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-64
+22-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:5-67
+22-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:12:22-64
 23    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-23-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-80
-23-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-77
+23-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:5-80
+23-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:13:22-77
 24    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-24-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-81
-24-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-78
+24-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:5-81
+24-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:14:22-78
 25    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
-25-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-80
-25-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-77
-26    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-26-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:5-18:40
-26-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:9-66
-27    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-27-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:5-77
-27-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:22-74
-28    <uses-permission android:name="android.permission.CAMERA" />
-28-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:5-65
-28-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:22-62
-29    <uses-permission android:name="android.permission.BLUETOOTH" />
-29-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:5-68
-29-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:22-65
-30    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-30-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:5-71
-30-->[:base] C:\Users\l\Desktop\Android\Fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:22-68
-31
-32    <application
-32-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:15:5-47:19
-33        android:name="com.example.fish.FishApplication"
-33-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:16:9-40
-34        android:allowBackup="true"
-34-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:17:9-35
-35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-35-->[androidx.core:core:1.7.0] C:\Users\l\.gradle\caches\transforms-3\ae9616d13e5213c0aa09c43a28ce0756\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-36        android:dataExtractionRules="@xml/data_extraction_rules"
-36-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:18:9-65
-37        android:debuggable="true"
-38        android:fullBackupContent="@xml/backup_rules"
-38-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:19:9-54
-39        android:icon="@mipmap/ic_launcher"
-39-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:20:9-43
-40        android:label="@string/app_name"
-40-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:21:9-41
-41        android:networkSecurityConfig="@xml/network_security_config"
-41-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:22:9-69
-42        android:requestLegacyExternalStorage="true"
-42-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:23:9-52
-43        android:roundIcon="@mipmap/ic_launcher_round"
-43-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:24:9-54
-44        android:supportsRtl="true"
-44-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:25:9-35
-45        android:testOnly="true"
-46        android:theme="@style/Theme.Fish" >
-46-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:26:9-42
-47        <activity
-47-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:28:9-30:40
-48            android:name="com.example.fish.ui.person.SettingActivity"
-48-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:29:13-54
-49            android:exported="false" />
-49-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:30:13-37
-50        <activity
-50-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:31:9-33:40
-51            android:name="com.example.fish.ui.detail.DetailActivity"
-51-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:32:13-53
-52            android:exported="false" />
-52-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:33:13-37
-53        <activity
-53-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:34:9-37:59
-54            android:name="com.example.fish.ui.MainActivity"
-54-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:35:13-44
-55            android:exported="false"
-55-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:36:13-37
-56            android:windowSoftInputMode="adjustNothing" />
-56-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:37:13-56
-57        <activity
-57-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:38:9-46:20
-58            android:name="com.example.fish.ui.auth.LoginActivity"
-58-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:39:13-50
-59            android:exported="true" >
-59-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:40:13-36
-60            <intent-filter>
-60-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:41:13-45:29
-61                <action android:name="android.intent.action.MAIN" />
-61-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:42:17-69
-61-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:42:25-66
-62
-63                <category android:name="android.intent.category.LAUNCHER" />
-63-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:44:17-77
-63-->C:\Users\l\Desktop\Android\Fish\app\src\main\AndroidManifest.xml:44:27-74
-64            </intent-filter>
-65        </activity>
-66
-67        <service
-67-->[androidx.room:room-runtime:2.4.3] C:\Users\l\.gradle\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
-68            android:name="androidx.room.MultiInstanceInvalidationService"
-68-->[androidx.room:room-runtime:2.4.3] C:\Users\l\.gradle\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
-69            android:directBootAware="true"
-69-->[androidx.room:room-runtime:2.4.3] C:\Users\l\.gradle\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
-70            android:exported="false" />
-70-->[androidx.room:room-runtime:2.4.3] C:\Users\l\.gradle\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
-71
-72        <provider
-72-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:10:9-18:20
-73            android:name="com.luck.picture.lib.basic.PictureFileProvider"
-73-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:11:13-74
-74            android:authorities="com.example.fish.luckProvider"
-74-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:12:13-64
-75            android:exported="false"
-75-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:13:13-37
-76            android:grantUriPermissions="true" >
-76-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:14:13-47
-77            <meta-data
-77-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:15:13-17:57
-78                android:name="android.support.FILE_PROVIDER_PATHS"
-78-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:16:17-67
-79                android:resource="@xml/ps_file_paths" />
-79-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:17:17-54
-80        </provider>
-81
-82        <service
-82-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:20:9-23:56
-83            android:name="com.luck.picture.lib.service.ForegroundService"
-83-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:21:13-74
-84            android:enabled="true"
-84-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:22:13-35
-85            android:foregroundServiceType="location" />
-85-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:23:13-53
-86
-87        <activity
-87-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:25:9-29:20
-88            android:name="com.luck.picture.lib.basic.PictureSelectorSupporterActivity"
-88-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:26:13-87
-89            android:configChanges="orientation|keyboardHidden|screenSize"
-89-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:27:13-74
-90            android:theme="@style/Base.Theme.NoActionBar" >
-90-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:28:13-58
-91        </activity>
-92        <activity
-92-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:30:9-34:20
-93            android:name="com.luck.picture.lib.basic.PictureSelectorTransparentActivity"
-93-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:31:13-89
-94            android:configChanges="orientation|keyboardHidden|screenSize"
-94-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:32:13-74
-95            android:theme="@style/Picture.Theme.Translucent" >
-95-->[io.github.lucksiege:pictureselector:v3.10.6] C:\Users\l\.gradle\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:33:13-61
-96        </activity>
-97
-98        <provider
-98-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-99            android:name="androidx.startup.InitializationProvider"
-99-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-100            android:authorities="com.example.fish.androidx-startup"
-100-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-101            android:exported="false" >
-101-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-102            <meta-data
-102-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-103                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-103-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-104                android:value="androidx.startup" />
-104-->[androidx.emoji2:emoji2:1.0.0] C:\Users\l\.gradle\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-105            <meta-data
-105-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\l\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-106                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-106-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\l\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-107                android:value="androidx.startup" />
-107-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\l\.gradle\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-108        </provider>
-109    </application>
-110
-111</manifest>
+25-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:5-80
+25-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:15:22-77
+26    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+26-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:5-77
+26-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:22-74
+27    <uses-permission android:name="android.permission.CAMERA" />
+27-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:5-65
+27-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:22-62
+28    <uses-permission android:name="android.permission.BLUETOOTH" />
+28-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:5-68
+28-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:22-65
+29    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+29-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:5-71
+29-->[:base] E:\StudyItem\fish\base\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:22-68
+30
+31    <application
+31-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:15:5-47:19
+32        android:name="com.example.fish.FishApplication"
+32-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:16:9-40
+33        android:allowBackup="true"
+33-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:17:9-35
+34        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+34-->[androidx.core:core:1.7.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ae9616d13e5213c0aa09c43a28ce0756\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+35        android:dataExtractionRules="@xml/data_extraction_rules"
+35-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:18:9-65
+36        android:debuggable="true"
+37        android:fullBackupContent="@xml/backup_rules"
+37-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:19:9-54
+38        android:icon="@mipmap/ic_launcher"
+38-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:20:9-43
+39        android:label="@string/app_name"
+39-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:21:9-41
+40        android:networkSecurityConfig="@xml/network_security_config"
+40-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:22:9-69
+41        android:requestLegacyExternalStorage="true"
+41-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:23:9-52
+42        android:roundIcon="@mipmap/ic_launcher_round"
+42-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:24:9-54
+43        android:supportsRtl="true"
+43-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:25:9-35
+44        android:testOnly="true"
+45        android:theme="@style/Theme.Fish" >
+45-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:26:9-42
+46        <activity
+46-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:28:9-30:40
+47            android:name="com.example.fish.ui.person.SettingActivity"
+47-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:29:13-54
+48            android:exported="false" />
+48-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:30:13-37
+49        <activity
+49-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:31:9-33:40
+50            android:name="com.example.fish.ui.detail.DetailActivity"
+50-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:32:13-53
+51            android:exported="false" />
+51-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:33:13-37
+52        <activity
+52-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:34:9-37:59
+53            android:name="com.example.fish.ui.MainActivity"
+53-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:35:13-44
+54            android:exported="false"
+54-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:36:13-37
+55            android:windowSoftInputMode="adjustNothing" />
+55-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:37:13-56
+56        <activity
+56-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:38:9-46:20
+57            android:name="com.example.fish.ui.auth.LoginActivity"
+57-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:39:13-50
+58            android:exported="true" >
+58-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:40:13-36
+59            <intent-filter>
+59-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:41:13-45:29
+60                <action android:name="android.intent.action.MAIN" />
+60-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:42:17-69
+60-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:42:25-66
+61
+62                <category android:name="android.intent.category.LAUNCHER" />
+62-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:44:17-77
+62-->E:\StudyItem\fish\app\src\main\AndroidManifest.xml:44:27-74
+63            </intent-filter>
+64        </activity>
+65
+66        <service
+66-->[androidx.room:room-runtime:2.4.3] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:25:9-28:40
+67            android:name="androidx.room.MultiInstanceInvalidationService"
+67-->[androidx.room:room-runtime:2.4.3] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:26:13-74
+68            android:directBootAware="true"
+68-->[androidx.room:room-runtime:2.4.3] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:27:13-43
+69            android:exported="false" />
+69-->[androidx.room:room-runtime:2.4.3] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\f7f027056f789f59bfc39a1af943caf6\transformed\room-runtime-2.4.3\AndroidManifest.xml:28:13-37
+70
+71        <provider
+71-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:10:9-18:20
+72            android:name="com.luck.picture.lib.basic.PictureFileProvider"
+72-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:11:13-74
+73            android:authorities="com.example.fish.luckProvider"
+73-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:12:13-64
+74            android:exported="false"
+74-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:13:13-37
+75            android:grantUriPermissions="true" >
+75-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:14:13-47
+76            <meta-data
+76-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:15:13-17:57
+77                android:name="android.support.FILE_PROVIDER_PATHS"
+77-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:16:17-67
+78                android:resource="@xml/ps_file_paths" />
+78-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:17:17-54
+79        </provider>
+80
+81        <service
+81-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:20:9-23:56
+82            android:name="com.luck.picture.lib.service.ForegroundService"
+82-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:21:13-74
+83            android:enabled="true"
+83-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:22:13-35
+84            android:foregroundServiceType="location" />
+84-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:23:13-53
+85
+86        <activity
+86-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:25:9-29:20
+87            android:name="com.luck.picture.lib.basic.PictureSelectorSupporterActivity"
+87-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:26:13-87
+88            android:configChanges="orientation|keyboardHidden|screenSize"
+88-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:27:13-74
+89            android:theme="@style/Base.Theme.NoActionBar" >
+89-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:28:13-58
+90        </activity>
+91        <activity
+91-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:30:9-34:20
+92            android:name="com.luck.picture.lib.basic.PictureSelectorTransparentActivity"
+92-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:31:13-89
+93            android:configChanges="orientation|keyboardHidden|screenSize"
+93-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:32:13-74
+94            android:theme="@style/Picture.Theme.Translucent" >
+94-->[io.github.lucksiege:pictureselector:v3.10.6] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\ec52f6c5d8c8b8e77ef1efb11e6154d3\transformed\jetified-pictureselector-v3.10.6\AndroidManifest.xml:33:13-61
+95        </activity>
+96
+97        <provider
+97-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+98            android:name="androidx.startup.InitializationProvider"
+98-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+99            android:authorities="com.example.fish.androidx-startup"
+99-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+100            android:exported="false" >
+100-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+101            <meta-data
+101-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+102                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+102-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+103                android:value="androidx.startup" />
+103-->[androidx.emoji2:emoji2:1.0.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\79eab2ef90e93597174e2d09662c3233\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+104            <meta-data
+104-->[androidx.lifecycle:lifecycle-process:2.4.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+105                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+105-->[androidx.lifecycle:lifecycle-process:2.4.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+106                android:value="androidx.startup" />
+106-->[androidx.lifecycle:lifecycle-process:2.4.0] D:\Program Files\Android\.gradle\wrapper\dists\gradle-6.7.1-bin\bwlcbys1h7rz3272sye1xwiv6\caches\transforms-3\6da2f60219897626d60e46d603ca1868\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+107        </provider>
+108    </application>
+109
+110</manifest>

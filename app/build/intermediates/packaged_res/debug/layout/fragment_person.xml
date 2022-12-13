@@ -243,7 +243,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="15dp"
-                    android:text="我发布的"
+                    android:text="我卖出的"
                     android:textColor="@color/black"
                     android:textSize="15sp">
 
